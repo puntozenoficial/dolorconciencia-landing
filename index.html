@@ -897,7 +897,7 @@
   <!-- DERECHA: Imagen + phone flotante -->
   <div class="hero-right">
     <img class="hero-right-bg"
-      src="Imagenes de la app/hero_yoga_mockups_v2.jpg"
+      src="Imagenes de la app/hero_majo_perfil.jpg"
       alt="Persona usando la app DolorConCiencia">
     <div class="hero-right-overlay"></div>
 
@@ -1003,21 +1003,21 @@
 
     <div class="screens-scroll">
       <div class="screen-card">
-        <img src="Imagenes de la app/app_home_screen.jpg" alt="Pantalla inicio — Buen día, Majo. Día 9 de 28. Tu progreso 29%." onclick="openLightbox('Imagenes de la app/app_home_screen.jpg')" style="cursor:pointer;">
+        <img src="Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (1).jpeg" alt="Pantalla inicio — Buen día, Majo. Día 10 de 28. Tu progreso 32%." onclick="openLightbox('Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (1).jpeg')" style="cursor:pointer;">
         <div class="screen-label">
           <strong>Pantalla de inicio</strong>
           Racha, progreso y check-in de dolor diario
         </div>
       </div>
       <div class="screen-card">
-        <img src="Imagenes de la app/app_exercise_day.jpg" alt="Ejercicios del día — Dead Bug, Bird-Dog, Transverso" onclick="openLightbox('Imagenes de la app/app_exercise_day.jpg')" style="cursor:pointer;">
+        <img src="Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (2).jpeg" alt="Ejercicios del día — Puente de cadera, Bird-Dog, Fuerza profunda" onclick="openLightbox('Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (2).jpeg')" style="cursor:pointer;">
         <div class="screen-label">
           <strong>Tus ejercicios de hoy</strong>
           Nombre, duración y consejo ergonómico
         </div>
       </div>
       <div class="screen-card">
-        <img src="Imagenes de la app/ejercicio_deadbug_app.jpg" alt="Paola haciendo Dead Bug con la pantalla de la app visible" onclick="openLightbox('Imagenes de la app/ejercicio_deadbug_app.jpg')" style="cursor:pointer;">
+        <img src="Imagenes de la app/IMAGENES SIN MARCAS DE AGUA/ejercicio_deadbug_app.jpg" alt="Paola haciendo Dead Bug con la pantalla de la app visible" onclick="openLightbox('Imagenes de la app/IMAGENES SIN MARCAS DE AGUA/ejercicio_deadbug_app.jpg')" style="cursor:pointer;">
         <div class="screen-label">
           <strong>La app mientras lo hacés</strong>
           Instrucciones, tip científico y temporizador al lado tuyo
@@ -1151,14 +1151,14 @@
         <img src="guia_preview_p5.jpg" alt="Día 7 — Mirá lo que construiste: checkpoint de progreso a la semana" loading="lazy">
       </div>
       <!-- Screenshots reales de la app -->
-      <div class="preview-page" onclick="openLightbox('Imagenes de la app/app_home_screen.jpg')">
-        <img src="Imagenes de la app/app_home_screen.jpg" alt="App — Pantalla de inicio con racha y progreso diario" loading="lazy">
+      <div class="preview-page" onclick="openLightbox('Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (1).jpeg')">
+        <img src="Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (1).jpeg" alt="App — Pantalla de inicio con racha y progreso diario" loading="lazy">
       </div>
-      <div class="preview-page" onclick="openLightbox('Imagenes de la app/app_exercise_day.jpg')">
-        <img src="Imagenes de la app/app_exercise_day.jpg" alt="App — Ejercicios del día con consejo ergonómico" loading="lazy">
+      <div class="preview-page" onclick="openLightbox('Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (2).jpeg')">
+        <img src="Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (2).jpeg" alt="App — Ejercicios del día con consejo ergonómico" loading="lazy">
       </div>
-      <div class="preview-page" onclick="openLightbox('Imagenes de la app/app_dead_bug.jpg')">
-        <img src="Imagenes de la app/app_dead_bug.jpg" alt="App — Detalle ejercicio: video + instrucciones + tip + temporizador" loading="lazy">
+      <div class="preview-page" onclick="openLightbox('Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (3).jpeg')">
+        <img src="Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (3).jpeg" alt="App — Detalle ejercicio: video + instrucciones + tip + temporizador" loading="lazy">
       </div>
     </div>
     <p style="font-size:0.8rem; color:var(--texto-claro); margin-top:12px; text-align:center;">← Deslizá · Hacé clic para ampliar cualquier página</p>
@@ -1896,4 +1896,22 @@
     document.getElementById('lightbox').classList.add('open');
   }
   function closeLightbox() {
-    document.getElementById('lig
+    document.getElementById('lightbox').classList.remove('open');
+  }
+  function toggleFaq(btn) {
+    const respuesta = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    // Close all open items first
+    document.querySelectorAll('.faq-pregunta.open').forEach(function(b) {
+      b.classList.remove('open');
+      b.nextElementSibling.classList.remove('open');
+    });
+    // Open clicked item unless it was already open
+    if (!isOpen) {
+      btn.classList.add('open');
+      respuesta.classList.add('open');
+    }
+  }
+</script>
+</body>
+</html>

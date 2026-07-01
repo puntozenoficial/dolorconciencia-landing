@@ -422,8 +422,8 @@
         <div class="screen-label"><span class="screen-badge badge-espalda">Espalda y cuello</span><br><strong>Tus ejercicios de hoy</strong>Video, tip científico y temporizador</div>
       </div>
       <div class="screen-card">
-        <img src="Imagenes de la app/ejercicio_deadbug_app.jpg" alt="Paola haciendo Dead Bug con la pantalla de la app visible" onclick="openLightbox('Imagenes de la app/ejercicio_deadbug_app.jpg')" style="cursor:pointer;">
-        <div class="screen-label"><span class="screen-badge badge-espalda">Espalda y cuello</span><br><strong>La app mientras lo hacés</strong>Instrucciones al lado tuyo, en vivo</div>
+        <img src="Imagenes de la app/app_puente_cadera_detalle.jpg" alt="Pantalla de ejercicio Puente de cadera progresión, con video demostrativo y pasos" onclick="openLightbox('Imagenes de la app/app_puente_cadera_detalle.jpg')" style="cursor:pointer;">
+        <div class="screen-label"><span class="screen-badge badge-espalda">Espalda y cuello</span><br><strong>La app mientras lo hacés</strong>Video demostrativo, pasos y temporizador</div>
       </div>
       <div class="screen-card">
         <img src="assets/ventas_rodilla/mock_home_dashboard.png" alt="Pantalla de inicio rodilla y cadera — Día 4 de 14, 21% de progreso" onclick="openLightbox('assets/ventas_rodilla/mock_home_dashboard.png')" style="cursor:pointer;">
@@ -713,9 +713,8 @@
     <p class="lead">La app pregunta dónde trabajás, cómo te movés y dónde te duele — y desde ahí arma tu perfil. La guía PDF que viene de regalo te queda como respaldo para repasar cualquier ejercicio, incluso sin señal.</p>
 
     <div class="preview-scroll">
-      <div class="preview-page" onclick="openLightbox('guia_preview_p1.jpg')"><img src="guia_preview_p1.jpg" alt="Portada — Protocolo 28 Días Espalda y Cuello" loading="lazy"></div>
-      <div class="preview-page" onclick="openLightbox('guia_preview_p3.jpg')"><img src="guia_preview_p3.jpg" alt="Ejercicios ilustrados paso a paso, con modificación si hay dificultad" loading="lazy"></div>
-      <div class="preview-page" onclick="openLightbox('guia_preview_p5.jpg')"><img src="guia_preview_p5.jpg" alt="Checkpoint de progreso a la semana" loading="lazy"></div>
+      <div class="preview-page" onclick="openLightbox('Imagenes de la app/app_progreso_dolor.jpg')"><img src="Imagenes de la app/app_progreso_dolor.jpg" alt="Mi progreso — evolución de tu dolor semana a semana" loading="lazy"></div>
+      <div class="preview-page" onclick="openLightbox('Imagenes de la app/app_programa_28dias.jpg')"><img src="Imagenes de la app/app_programa_28dias.jpg" alt="Tu programa — 28 días hacia una columna libre de dolor" loading="lazy"></div>
       <div class="preview-page" onclick="openLightbox('assets/ventas_rodilla/mock_dia_completado.png')"><img src="assets/ventas_rodilla/mock_dia_completado.png" alt="App Rodilla y Cadera — cada día con su porqué" loading="lazy"></div>
       <div class="preview-page" onclick="openLightbox('Imagenes de la app/app_home_screen.jpg')"><img src="Imagenes de la app/app_home_screen.jpg" alt="App — Pantalla de inicio con racha y progreso diario" loading="lazy"></div>
       <div class="preview-page" onclick="openLightbox('assets/ventas_rodilla/mock_trivia_v2.png')"><img src="assets/ventas_rodilla/mock_trivia_v2.png" alt="App — Trivia de neurociencia del dolor" loading="lazy"></div>
@@ -1021,4 +1020,5 @@
   function toggleFaq(btn) {
     const respuesta = btn.nextElementSibling;
     const isOpen = btn.classList.contains('open');
-    document.querySelectorAll('.faq-pregunta.open'
+    document.querySelectorAll('.faq-pregunta.open').forEach(function(b) {
+      b.classList.remove('

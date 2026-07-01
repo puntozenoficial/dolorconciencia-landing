@@ -204,9 +204,9 @@
   .preview-scroll { display: flex; gap: 16px; overflow-x: auto; padding: 20px 0 8px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: var(--verde-borde) transparent; }
   .preview-scroll::-webkit-scrollbar { height: 6px; }
   .preview-scroll::-webkit-scrollbar-thumb { background: var(--verde-borde); border-radius: 3px; }
-  .preview-page { flex-shrink: 0; width: 200px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.12); scroll-snap-align: start; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+  .preview-page { flex-shrink: 0; width: 200px; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.12); scroll-snap-align: start; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
   .preview-page:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,0,0,0.18); }
-  .preview-page img { width: 100%; display: block; }
+  .preview-page img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   /* Lightbox */
   .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 9999; align-items: center; justify-content: center; padding: 24px; }
@@ -315,7 +315,7 @@
     <p class="hero-bajada">
       Masajes, pastillas, reposo, fisio, "fuerza de core" —
       <strong>si nada te duró, es porque ninguno te acompañó después.</strong>
-      DolorConCiencia son dos protocolos guiados por app — uno para espalda y cuello, otro para cadera y rodilla — que conocen tu caso, registran cómo estás cada día y te dicen exactamente qué hacer. Sin improvisar. Sin olvidar dónde ibas.
+      DolorConCiencia son <strong>dos apps</strong> — un protocolo guiado día a día, uno para espalda y cuello, otro para cadera y rodilla — que conocen tu caso, registran cómo estás cada día y te dicen exactamente qué hacer. Sin improvisar. Sin olvidar dónde ibas.
     </p>
 
     <a class="btn-wa" href="https://wa.me/542494205535?text=Hola!%20Vi%20la%20página%20de%20DolorConCiencia%20y%20quiero%20saber%20más%20🌿" target="_blank">
@@ -324,7 +324,6 @@
     </a>
 
     <p class="hero-micro">✔ Garantía de 7 días · Acceso inmediato · Sin descargar nada del store</p>
-    <p class="hero-micro" style="margin-top:6px; color: #4caf7d; font-weight:600;">🎁 Te regalo el Mapa de Dolor gratis cuando me escribís</p>
 
     <div class="hero-badges">
       <div class="hero-badge"><span>🧬</span> Neurociencia del dolor</div>
@@ -372,33 +371,11 @@
 ══════════════════════════════════ -->
 <section class="videos-section">
   <div class="container">
-    <span class="label">La diferencia es abismal</span>
-    <h2>Mirá lo que pasa cuando cambiás<br>solo 15 minutos de tu día.</h2>
-    <p class="lead">Un oficinista que sigue igual — sin cambiar nada de su rutina. Y uno que empezó a usar DolorConCiencia. Mismo trabajo, misma silla, misma pantalla. La diferencia es lo que hace con esos 15 minutos.</p>
+    <span class="label">Así por dentro</span>
+    <h2>Así se ve tu compañera<br>de vida, por dentro.</h2>
+    <p class="lead">No es una lista de videos que mirás una vez. Es la app que abrís cada mañana — con tu racha, tu ejercicio del día y el registro de cómo vas mejorando.</p>
 
     <div class="videos-grid">
-      <div class="video-card">
-        <div class="video-wrap">
-          <video controls muted loop playsinline preload="metadata">
-            <source src="videos/video_antes.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-caption">
-          <strong>Sin la app</strong>
-          El cuello tenso, la espalda cargada, el dolor que aparece cada tarde. Sigue aguantando — porque nadie le enseñó otra forma.
-        </div>
-      </div>
-      <div class="video-card">
-        <div class="video-wrap">
-          <video controls muted loop playsinline preload="metadata">
-            <source src="videos/video_despues.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-caption">
-          <strong>Con la app</strong>
-          15 minutos al día. El mismo cuerpo — pero que aprendió a moverse sin dolor. Eso es lo que entrena DolorConCiencia.
-        </div>
-      </div>
       <div class="video-card">
         <div class="video-wrap">
           <video controls muted loop playsinline preload="metadata">
@@ -406,7 +383,7 @@
           </video>
         </div>
         <div class="video-caption">
-          <strong>La app completa — 1 minuto y pico</strong>
+          <strong>Así se ve la app por dentro</strong>
           Tu racha, el ejercicio del día, el gráfico de cómo baja tu dolor semana a semana. Se siente como un juego — uno que te sana de verdad.
         </div>
       </div>
@@ -704,6 +681,14 @@
       </div>
     </div>
 
+    <div class="ciclo-ruptura" style="margin-top:8px;">
+      <p>
+        ♾️ <strong>Los 28 o 14 días son el arranque, no el límite.</strong> Cuando terminás el protocolo, la app sigue con vos: a medida que avanzás con responsabilidad, te va proponiendo ejercicios un poco más exigentes — por eso le sirve tanto a Susana, jubilada de baja movilidad, como a alguien muy entrenado.
+        <br><br>
+        Y si el dolor vuelve más adelante, no empezás de cero: abrís la app y seguís desde donde tu cuerpo está hoy. <strong>No es un curso que termina — es tu compañera de vida.</strong>
+      </p>
+    </div>
+
     <div class="incluye-grid">
       <div class="incluye-item"><div class="incluye-icon">📲</div> Tu app: perfil personalizado, ejercicios guiados y seguimiento diario</div>
       <div class="incluye-item"><div class="incluye-icon">📊</div> Se adapta a tu caso desde el día 1 — no es un programa genérico</div>
@@ -731,7 +716,7 @@
       <div class="preview-page" onclick="openLightbox('guia_preview_p1.jpg')"><img src="guia_preview_p1.jpg" alt="Portada — Protocolo 28 Días Espalda y Cuello" loading="lazy"></div>
       <div class="preview-page" onclick="openLightbox('guia_preview_p3.jpg')"><img src="guia_preview_p3.jpg" alt="Ejercicios ilustrados paso a paso, con modificación si hay dificultad" loading="lazy"></div>
       <div class="preview-page" onclick="openLightbox('guia_preview_p5.jpg')"><img src="guia_preview_p5.jpg" alt="Checkpoint de progreso a la semana" loading="lazy"></div>
-      <div class="preview-page" onclick="openLightbox('guia rodilla-cadera.jpeg')"><img src="guia rodilla-cadera.jpeg" alt="Portada — Guía Rodilla y Cadera" loading="lazy"></div>
+      <div class="preview-page" onclick="openLightbox('assets/ventas_rodilla/mock_dia_completado.png')"><img src="assets/ventas_rodilla/mock_dia_completado.png" alt="App Rodilla y Cadera — cada día con su porqué" loading="lazy"></div>
       <div class="preview-page" onclick="openLightbox('Imagenes de la app/app_home_screen.jpg')"><img src="Imagenes de la app/app_home_screen.jpg" alt="App — Pantalla de inicio con racha y progreso diario" loading="lazy"></div>
       <div class="preview-page" onclick="openLightbox('assets/ventas_rodilla/mock_trivia_v2.png')"><img src="assets/ventas_rodilla/mock_trivia_v2.png" alt="App — Trivia de neurociencia del dolor" loading="lazy"></div>
     </div>
@@ -917,7 +902,7 @@
 
     </div>
 
-    <p style="margin-top:24px; font-size:0.92rem; color:#4caf7d; font-weight:700;">🎁 Te regalo el Mapa de Dolor gratis cuando me escribís por WhatsApp</p>
+    <p style="margin-top:24px; font-size:0.92rem; color:#4caf7d; font-weight:700;">♾️ No es un curso de 14 o 28 días que termina y ya — es tu app de por vida. Cuando el dolor vuelve, la abrís de nuevo.</p>
 
     <div class="garantia-pill">
       <div class="g-icon">🛡️</div>
@@ -947,6 +932,11 @@
       <div class="faq-item">
         <button class="faq-pregunta" onclick="toggleFaq(this)">¿Cuál protocolo me conviene, o puedo comprar los dos?<span class="faq-icon">+</span></button>
         <div class="faq-respuesta">Si tu dolor es de espalda o cuello, empezá por ese. Si es de cadera o rodilla, por el otro. Si tenés las dos cosas — es más común de lo que pensás, porque una compensación termina afectando la otra zona — el Pack Completo te conviene: las 2 apps + las 2 guías por $29.99, en vez de comprarlas separadas.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">¿La app deja de servir después de los 14 o 28 días?<span class="faq-icon">+</span></button>
+        <div class="faq-respuesta">No. El protocolo de 14 o 28 días es el arranque, pero la app queda con vos para siempre. A medida que avanzás con responsabilidad, te va proponiendo ejercicios un poco más exigentes — por eso funciona igual de bien para alguien de baja movilidad que para alguien muy entrenado. Y si el dolor vuelve dentro de un año, no pagás de nuevo: abrís la app y retomás desde donde estás.</div>
       </div>
 
       <div class="faq-item">
@@ -1031,16 +1021,4 @@
   function toggleFaq(btn) {
     const respuesta = btn.nextElementSibling;
     const isOpen = btn.classList.contains('open');
-    document.querySelectorAll('.faq-pregunta.open').forEach(function(b) {
-      b.classList.remove('open');
-      b.nextElementSibling.classList.remove('open');
-    });
-    if (!isOpen) {
-      btn.classList.add('open');
-      respuesta.classList.add('open');
-    }
-  }
-</script>
-</body>
-</html>
-                                            
+    document.querySelectorAll('.faq-pregunta.open').

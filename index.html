@@ -398,6 +398,17 @@
           Tu racha, el ejercicio del día, el gráfico de cómo baja tu dolor semana a semana. Se siente como un juego — uno que te sana de verdad.
         </div>
       </div>
+      <div class="video-card">
+        <div class="video-wrap">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="videos/ejemplo_sentadilla.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-caption">
+          <strong>Ejemplo: sentadilla con buena técnica</strong>
+          Piernas separadas a la altura de la cadera, postura controlada — así se ve un ejercicio bien guiado, paso a paso.
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1005,20 +1016,4 @@
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <img id="lightbox-img" src="" alt="">
-</div>
-
-
-<script>
-  function openLightbox(src) {
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox').classList.add('open');
-  }
-  function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('open');
-  }
-  function toggleFaq(btn) {
-    const respuesta = btn.nextElementSibling;
-    const isOpen = btn.classList.contains('open');
-    document.querySelectorAll('.faq-pregunta.open').forEach(function(b) {
-      b.classList.re
+  <img id="lightbox-img" src=""

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DolorConCiencia — La app que reentrena tu sistema nervioso en 28 días</title>
+<title>DolorConCiencia — La app que reentrena tu sistema nervioso frente al dolor crónico</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -48,747 +48,221 @@
     z-index: 2;
   }
 
-  .hero-right {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-right-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .hero-right-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, #0d2b1a 0%, transparent 30%);
-  }
+  .hero-right { position: relative; overflow: hidden; }
+  .hero-right-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+  .hero-right-overlay { position: absolute; inset: 0; background: linear-gradient(to right, #0d2b1a 0%, transparent 32%); }
 
   .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(76,175,125,0.18);
-    border: 1px solid rgba(76,175,125,0.35);
-    color: #a8e6c3;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 7px 16px;
-    border-radius: 100px;
-    margin-bottom: 28px;
-    width: fit-content;
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(76,175,125,0.18); border: 1px solid rgba(76,175,125,0.35);
+    color: #a8e6c3; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 7px 16px; border-radius: 100px;
+    margin-bottom: 28px; width: fit-content;
   }
 
   .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.9rem, 3vw, 3rem);
-    font-weight: 900;
-    line-height: 1.13;
-    color: #fff;
-    margin-bottom: 10px;
+    font-size: clamp(1.85rem, 3vw, 2.85rem);
+    font-weight: 900; line-height: 1.15; color: #fff; margin-bottom: 10px;
   }
+  .hero h1 em { font-style: italic; color: var(--verde-acento); }
+  .hero h1 .dolor-highlight { color: #f5c842; font-style: normal; }
 
-  .hero h1 em {
-    font-style: italic;
-    color: var(--verde-acento);
-  }
-
-  .hero h1 .dolor-highlight {
-    color: #f5c842;
-    font-style: normal;
-  }
-
-  .hero-bajada {
-    font-size: clamp(0.93rem, 1.3vw, 1.05rem);
-    color: rgba(255,255,255,0.62);
-    margin: 20px 0 36px;
-    line-height: 1.75;
-  }
-
+  .hero-bajada { font-size: clamp(0.93rem, 1.3vw, 1.05rem); color: rgba(255,255,255,0.62); margin: 20px 0 30px; line-height: 1.75; }
   .hero-bajada strong { color: rgba(255,255,255,0.9); }
 
   .btn-wa {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: #25D366;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 17px 34px;
-    border-radius: 100px;
-    text-decoration: none;
+    display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+    background: #25D366; color: #fff; font-size: 1rem; font-weight: 600;
+    padding: 17px 34px; border-radius: 100px; text-decoration: none;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 8px 32px rgba(37,211,102,0.3);
-    width: fit-content;
+    box-shadow: 0 8px 32px rgba(37,211,102,0.3); width: fit-content;
   }
-
   .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(37,211,102,0.45); }
 
-  .hero-micro {
-    margin-top: 16px;
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.35);
-    letter-spacing: 0.02em;
-    line-height: 1.6;
-  }
-
-  .hero-badges {
-    display: flex;
-    gap: 16px;
-    margin-top: 36px;
-    flex-wrap: wrap;
-  }
-
-  .hero-badge {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.7);
-  }
-
+  .hero-micro { margin-top: 16px; font-size: 0.78rem; color: rgba(255,255,255,0.35); letter-spacing: 0.02em; line-height: 1.6; }
+  .hero-badges { display: flex; gap: 14px; margin-top: 34px; flex-wrap: wrap; }
+  .hero-badge { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 10px 14px; font-size: 0.8rem; color: rgba(255,255,255,0.7); }
   .hero-badge span { font-size: 1.1rem; }
 
   @media (max-width: 820px) {
-    .hero {
-      grid-template-columns: 1fr;
-      min-height: auto;
-    }
-    .hero-left { padding: 60px 24px 48px; order: 2; }
-    .hero-right { height: 56vw; min-height: 280px; order: 1; }
-    .hero-phone-float { width: 110px; bottom: 20px; left: 20px; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 56px 22px 44px; order: 2; }
+    .hero-right { height: 62vw; min-height: 320px; order: 1; }
   }
 
   /* ─── STATS STRIP ────────────────────────────────── */
-  .stats-strip {
-    background: var(--verde-oscuro);
-    padding: 36px 24px;
-  }
-
-  .stats-inner {
-    max-width: 880px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    gap: 48px;
-    flex-wrap: wrap;
-  }
-
+  .stats-strip { background: var(--verde-oscuro); padding: 36px 24px; }
+  .stats-inner { max-width: 920px; margin: 0 auto; display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; }
   .stat-item { text-align: center; }
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
-    font-weight: 900;
-    color: var(--verde-acento);
-    line-height: 1;
-  }
-  .stat-desc { font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-top: 4px; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2.3rem; font-weight: 900; color: var(--verde-acento); line-height: 1; }
+  .stat-desc { font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-top: 4px; max-width: 160px; }
 
   /* ─── SECCIÓN BASE ────────────────────────────────── */
   section { padding: 80px 24px; }
-  .container { max-width: 880px; margin: 0 auto; }
-
-  .label {
-    display: inline-block;
-    font-size: 0.71rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--verde-medio);
-    margin-bottom: 14px;
-  }
-
-  h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 4vw, 2.7rem);
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--texto);
-    margin-bottom: 20px;
-  }
-
-  .lead {
-    font-size: 1.05rem;
-    color: var(--texto-suave);
-    line-height: 1.75;
-    max-width: 680px;
-  }
+  .container { max-width: 920px; margin: 0 auto; }
+  .label { display: inline-block; font-size: 0.71rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--verde-medio); margin-bottom: 14px; }
+  h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.2; color: var(--texto); margin-bottom: 20px; }
+  .lead { font-size: 1.03rem; color: var(--texto-suave); line-height: 1.75; max-width: 700px; }
 
   /* ─── VIDEOS ─────────────────────────────────────── */
   .videos-section { background: var(--blanco); }
-
-  .videos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-    margin-top: 40px;
-  }
-
-  .video-card {
-    border-radius: 16px;
-    overflow: hidden;
-    background: #000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .video-wrap {
-    aspect-ratio: 9/16;
-    position: relative;
-    overflow: hidden;
-  }
-
+  .videos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 40px; }
+  .video-card { border-radius: 16px; overflow: hidden; background: #000; box-shadow: 0 4px 20px rgba(0,0,0,0.12); display: flex; flex-direction: column; }
+  .video-wrap { aspect-ratio: 9/16; position: relative; overflow: hidden; }
   .video-card video { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-  .video-placeholder {
-    width: 100%; height: 100%;
-    background: linear-gradient(135deg, #0d2b1a, #1a4a2e);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 12px; text-align: center; padding: 24px;
-  }
-
-  .video-placeholder .vp-icon { font-size: 2.2rem; opacity: 0.6; }
-  .video-placeholder p { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
-
-  .video-caption {
-    background: var(--verde-oscuro);
-    color: rgba(255,255,255,0.88);
-    font-size: 0.85rem;
-    line-height: 1.55;
-    padding: 14px 16px;
-    font-style: italic;
-  }
-
-  .video-caption strong {
-    display: block;
-    font-style: normal;
-    color: var(--verde-acento);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
+  .video-caption { background: var(--verde-oscuro); color: rgba(255,255,255,0.88); font-size: 0.85rem; line-height: 1.55; padding: 14px 16px; font-style: italic; }
+  .video-caption strong { display: block; font-style: normal; color: var(--verde-acento); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
 
   /* ─── APP SCREENS SHOWCASE ───────────────────────── */
   .app-screens { background: var(--verde-oscuro); }
   .app-screens .label { color: var(--verde-acento); }
   .app-screens h2 { color: #fff; }
   .app-screens .lead { color: rgba(255,255,255,0.62); }
-
-  .screens-scroll {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    padding: 32px 0 12px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(76,175,125,0.4) transparent;
-  }
-
+  .screens-scroll { display: flex; gap: 16px; overflow-x: auto; padding: 32px 0 12px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(76,175,125,0.4) transparent; }
   .screens-scroll::-webkit-scrollbar { height: 5px; }
   .screens-scroll::-webkit-scrollbar-thumb { background: rgba(76,175,125,0.35); border-radius: 3px; }
-
-  .screen-card {
-    flex-shrink: 0;
-    width: 200px;
-    scroll-snap-align: start;
-    position: relative;
-  }
-
-  .screen-card img {
-    width: 100%;
-    border-radius: 22px;
-    display: block;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-    border: 2px solid rgba(76,175,125,0.25);
-    transition: transform 0.2s;
-  }
-
+  .screen-card { flex-shrink: 0; width: 200px; scroll-snap-align: start; position: relative; }
+  .screen-card img { width: 100%; border-radius: 22px; display: block; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border: 2px solid rgba(76,175,125,0.25); transition: transform 0.2s; }
   .screen-card:hover img { transform: translateY(-6px); }
-
-  .screen-label {
-    margin-top: 12px;
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.5);
-    text-align: center;
-    line-height: 1.4;
-  }
-
+  .screen-label { margin-top: 12px; font-size: 0.78rem; color: rgba(255,255,255,0.5); text-align: center; line-height: 1.4; }
   .screen-label strong { display: block; color: rgba(255,255,255,0.85); font-size: 0.83rem; }
+  .screen-badge { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 100px; margin-bottom: 6px; }
+  .badge-espalda { background: rgba(76,175,125,0.2); color: #a8e6c3; }
+  .badge-rodilla { background: rgba(245,200,66,0.18); color: #f5c842; }
 
   /* ─── PERSONAS REALES ────────────────────────────── */
   .real-users { background: var(--crema); padding: 80px 24px; }
-
-  .real-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 40px;
-  }
-
-  .real-card {
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    aspect-ratio: 3/4;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-
-  .real-card img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-    transition: transform 0.4s;
-  }
-
+  .real-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+  .real-card { border-radius: 20px; overflow: hidden; position: relative; aspect-ratio: 3/4; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+  .real-card img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform 0.4s; }
   .real-card:hover img { transform: scale(1.04); }
+  .real-card-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(10,26,16,0.92) 0%, transparent 100%); padding: 36px 16px 16px; color: #fff; }
+  .real-card-caption strong { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 2px; }
+  .real-card-caption span { font-size: 0.75rem; color: rgba(255,255,255,0.6); }
 
-  .real-card-caption {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(to top, rgba(10,26,16,0.92) 0%, transparent 100%);
-    padding: 36px 16px 16px;
-    color: #fff;
-  }
+  @media (max-width: 700px) { .real-grid { grid-template-columns: 1fr 1fr; } }
 
-  .real-card-caption strong {
-    display: block;
-    font-size: 0.88rem;
-    font-weight: 600;
-    margin-bottom: 2px;
-  }
-
-  .real-card-caption span {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.6);
-  }
-
-  @media (max-width: 600px) {
-    .real-grid { grid-template-columns: 1fr 1fr; }
-    .real-grid .real-card:nth-child(3),
-    .real-grid .real-card:nth-child(4) { display: none; }
-  }
-
-  /* ─── CÓMO FUNCIONA ──────────────────────────────── */
-  .como-funciona { background: var(--blanco); }
-
-  .pasos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 0;
-    margin-top: 44px;
-    position: relative;
-  }
-
-  .pasos-grid::before {
-    content: '';
-    position: absolute;
-    top: 36px;
-    left: 10%;
-    width: 80%;
-    height: 2px;
-    background: linear-gradient(to right, var(--verde-borde), var(--verde-acento), var(--verde-borde));
-    z-index: 0;
-  }
-
-  .paso {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .paso-num {
-    width: 72px; height: 72px;
-    background: var(--blanco);
-    border: 3px solid var(--verde-borde);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: var(--verde-oscuro);
-    margin-bottom: 20px;
-    flex-shrink: 0;
-    transition: border-color 0.2s, background 0.2s;
-  }
-
-  .paso:hover .paso-num {
-    border-color: var(--verde-acento);
-    background: var(--verde-suave);
-  }
-
-  .paso h3 { font-size: 0.95rem; font-weight: 700; color: var(--texto); margin-bottom: 8px; }
-  .paso p  { font-size: 0.84rem; color: var(--texto-suave); line-height: 1.65; }
-
-  .paso-app-screen {
-    margin-top: 16px;
-    width: 100px;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.14);
-    border: 2px solid var(--verde-borde);
-  }
-
-  .paso-app-screen img { width: 100%; display: block; }
-
-  @media (max-width: 700px) {
-    .pasos-grid::before { display: none; }
-    .pasos-grid { gap: 32px; }
-  }
-
-  /* ─── PREVIEW GUÍA ────────────────────────────────── */
-  .preview-guia { background: var(--crema); }
-
-  .preview-scroll {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    padding: 20px 0 8px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: var(--verde-borde) transparent;
-  }
-
-  .preview-scroll::-webkit-scrollbar { height: 6px; }
-  .preview-scroll::-webkit-scrollbar-track { background: transparent; }
-  .preview-scroll::-webkit-scrollbar-thumb { background: var(--verde-borde); border-radius: 3px; }
-
-  .preview-page {
-    flex-shrink: 0;
-    width: 200px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-    scroll-snap-align: start;
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-  }
-
-  .preview-page:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,0,0,0.18); }
-  .preview-page img { width: 100%; display: block; }
-
-  /* Lightbox */
-  .lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.9);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-  }
-  .lightbox.open { display: flex; }
-  .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 12px; object-fit: contain; }
-  .lightbox-close {
-    position: absolute;
-    top: 20px; right: 24px;
-    color: #fff; font-size: 2rem; cursor: pointer;
-    background: none; border: none; line-height: 1;
-  }
-
-  /* ─── ¿TE IDENTIFICÁS? ────────────────────────────── */
+  /* ─── ¿TE SUENA? ──────────────────────────────────── */
   .identificas { background: var(--blanco); }
-
-  .perfiles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-    margin-top: 40px;
-  }
-
-  .perfil-card {
-    background: var(--crema);
-    border: 1px solid var(--crema-oscura);
-    border-radius: 16px;
-    padding: 26px 22px;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-
+  .perfiles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 40px; }
+  .perfil-card { background: var(--crema); border: 1px solid var(--crema-oscura); border-radius: 16px; padding: 26px 22px; transition: border-color 0.2s, box-shadow 0.2s; }
   .perfil-card:hover { border-color: var(--verde-borde); box-shadow: 0 4px 20px var(--sombra); }
   .perfil-card .emoji { font-size: 1.9rem; margin-bottom: 12px; }
   .perfil-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; color: var(--texto); }
-  .perfil-card p  { font-size: 0.87rem; color: var(--texto-suave); line-height: 1.6; }
+  .perfil-card p { font-size: 0.87rem; color: var(--texto-suave); line-height: 1.6; }
 
   .dolor-lista { margin-top: 44px; }
   .dolor-titulo { font-weight: 600; color: var(--texto); margin-bottom: 16px; font-size: 1rem; }
   .dolor-items { display: flex; flex-direction: column; gap: 10px; }
-  .dolor-item {
-    display: flex; align-items: flex-start; gap: 12px;
-    font-size: 0.95rem; color: var(--texto-suave);
-    background: var(--crema); border-left: 3px solid var(--verde-acento);
-    padding: 12px 16px; border-radius: 0 10px 10px 0;
-  }
+  .dolor-item { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; color: var(--texto-suave); background: var(--crema); border-left: 3px solid var(--verde-acento); padding: 12px 16px; border-radius: 0 10px 10px 0; }
 
   /* ─── CÍRCULO VICIOSO ─────────────────────────────── */
   .circulo { background: var(--crema); }
-
-  .ciclo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0;
-    margin-top: 40px;
-    border: 1px solid var(--crema-oscura);
-    border-radius: 20px;
-    overflow: hidden;
-  }
-
-  .ciclo-step {
-    padding: 28px 24px;
-    border-right: 1px solid var(--crema-oscura);
-    border-bottom: 1px solid var(--crema-oscura);
-    background: var(--blanco);
-    position: relative;
-  }
-
+  .ciclo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin-top: 40px; border: 1px solid var(--crema-oscura); border-radius: 20px; overflow: hidden; }
+  .ciclo-step { padding: 28px 24px; border-right: 1px solid var(--crema-oscura); border-bottom: 1px solid var(--crema-oscura); background: var(--blanco); position: relative; }
   .ciclo-step:last-child { border-right: none; }
-
-  .ciclo-num {
-    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
-    color: var(--verde-acento); text-transform: uppercase; margin-bottom: 8px;
-  }
-
+  .ciclo-num { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; color: var(--verde-acento); text-transform: uppercase; margin-bottom: 8px; }
   .ciclo-step h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
-  .ciclo-step p  { font-size: 0.85rem; color: var(--texto-suave); line-height: 1.6; }
-
-  .ciclo-ruptura {
-    background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-medio));
-    border-radius: 20px; padding: 32px 36px; margin-top: 28px; text-align: center; color: #fff;
-  }
-
+  .ciclo-step p { font-size: 0.85rem; color: var(--texto-suave); line-height: 1.6; }
+  .ciclo-ruptura { background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-medio)); border-radius: 20px; padding: 32px 36px; margin-top: 28px; text-align: center; color: #fff; }
   .ciclo-ruptura p { font-size: 1.05rem; line-height: 1.7; color: rgba(255,255,255,0.9); }
   .ciclo-ruptura strong { color: #fff; }
 
   /* ─── FRANJA CIENTÍFICA ───────────────────────────── */
-  .ciencia-strip {
-    background: #0d2b1a;
-    padding: 48px 24px;
-  }
-
-  .ciencia-inner {
-    max-width: 900px; margin: 0 auto;
-  }
-
-  .ciencia-titulo {
-    text-align: center;
-    font-size: 0.71rem; font-weight: 700; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--verde-acento);
-    margin-bottom: 12px;
-  }
-
-  .ciencia-h2 {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    color: #fff;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 700;
-    margin-bottom: 36px;
-    line-height: 1.3;
-  }
-
-  .ciencia-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-  }
-
-  .ciencia-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(76,175,125,0.2);
-    border-radius: 16px;
-    padding: 24px 20px;
-  }
-
+  .ciencia-strip { background: #0d2b1a; padding: 48px 24px; }
+  .ciencia-inner { max-width: 920px; margin: 0 auto; }
+  .ciencia-titulo { text-align: center; font-size: 0.71rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--verde-acento); margin-bottom: 12px; }
+  .ciencia-h2 { font-family: 'Playfair Display', serif; text-align: center; color: #fff; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; margin-bottom: 36px; line-height: 1.3; }
+  .ciencia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .ciencia-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(76,175,125,0.2); border-radius: 16px; padding: 24px 20px; }
   .ciencia-card .c-icon { font-size: 1.6rem; margin-bottom: 12px; }
   .ciencia-card h4 { font-size: 0.9rem; font-weight: 600; color: #fff; margin-bottom: 6px; }
   .ciencia-card p { font-size: 0.8rem; color: rgba(255,255,255,0.52); line-height: 1.65; }
-  .ciencia-card .c-ref {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 0.7rem;
-    color: var(--verde-acento);
-    font-style: italic;
-    opacity: 0.8;
-  }
+  .ciencia-card .c-ref { display: inline-block; margin-top: 10px; font-size: 0.7rem; color: var(--verde-acento); font-style: italic; opacity: 0.8; }
 
-  /* ─── LA SOLUCIÓN ─────────────────────────────────── */
+  /* ─── CÓMO ESTÁ ARMADO (2 protocolos) ────────────── */
   .solucion { background: var(--blanco); }
-
-  .fases {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px; margin-top: 40px;
-  }
-
-  .fase-card {
-    background: var(--verde-suave);
-    border: 1px solid var(--verde-borde);
-    border-radius: 16px; padding: 28px 24px;
-    border-top: 3px solid var(--verde-medio);
-  }
-
+  .protocolos-tabs { display: flex; gap: 10px; margin-top: 40px; margin-bottom: 28px; flex-wrap: wrap; }
+  .protocolo-tab-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 8px 18px; border-radius: 100px; background: var(--verde-suave); color: var(--verde-oscuro); border: 1px solid var(--verde-borde); }
+  .protocolo-bloque { margin-bottom: 48px; }
+  .protocolo-bloque:last-child { margin-bottom: 0; }
+  .protocolo-titulo { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--verde-oscuro); margin-bottom: 4px; }
+  .protocolo-sub { font-size: 0.88rem; color: var(--texto-claro); margin-bottom: 22px; }
+  .fases { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+  .fase-card { background: var(--verde-suave); border: 1px solid var(--verde-borde); border-radius: 16px; padding: 26px 22px; border-top: 3px solid var(--verde-medio); }
   .fase-num { font-size: 0.69rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--verde-medio); margin-bottom: 8px; }
   .fase-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--verde-oscuro); }
-  .fase-card p  { font-size: 0.87rem; color: var(--texto-suave); line-height: 1.65; }
+  .fase-card p { font-size: 0.87rem; color: var(--texto-suave); line-height: 1.65; }
 
-  .incluye-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 12px; margin-top: 40px;
-  }
+  .incluye-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 44px; }
+  .incluye-item { display: flex; align-items: center; gap: 14px; background: var(--crema); border: 1px solid var(--crema-oscura); border-radius: 12px; padding: 14px 18px; font-size: 0.92rem; color: var(--texto-suave); }
+  .incluye-icon { width: 36px; height: 36px; background: var(--verde-suave); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
 
-  .incluye-item {
-    display: flex; align-items: center; gap: 14px;
-    background: var(--crema); border: 1px solid var(--crema-oscura);
-    border-radius: 12px; padding: 14px 18px;
-    font-size: 0.92rem; color: var(--texto-suave);
-  }
+  /* ─── PREVIEW GUÍA ────────────────────────────────── */
+  .preview-guia { background: var(--crema); }
+  .preview-scroll { display: flex; gap: 16px; overflow-x: auto; padding: 20px 0 8px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: var(--verde-borde) transparent; }
+  .preview-scroll::-webkit-scrollbar { height: 6px; }
+  .preview-scroll::-webkit-scrollbar-thumb { background: var(--verde-borde); border-radius: 3px; }
+  .preview-page { flex-shrink: 0; width: 200px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.12); scroll-snap-align: start; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+  .preview-page:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,0,0,0.18); }
+  .preview-page img { width: 100%; display: block; }
 
-  .incluye-icon {
-    width: 36px; height: 36px;
-    background: var(--verde-suave);
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem; flex-shrink: 0;
-  }
+  /* Lightbox */
+  .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 9999; align-items: center; justify-content: center; padding: 24px; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 12px; object-fit: contain; }
+  .lightbox-close { position: absolute; top: 20px; right: 24px; color: #fff; font-size: 2rem; cursor: pointer; background: none; border: none; line-height: 1; }
 
   /* ─── TESTIMONIOS ─────────────────────────────────── */
   .testimonios { background: var(--crema); }
-
-  .testi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px; margin-top: 40px;
-  }
-
-  .testi-card {
-    background: var(--blanco);
-    border: 1px solid var(--crema-oscura);
-    border-radius: 20px; padding: 28px 24px;
-    display: flex; flex-direction: column; gap: 16px;
-    box-shadow: 0 2px 12px var(--sombra);
-    transition: box-shadow 0.2s;
-  }
-
+  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 40px; }
+  .testi-card { background: var(--blanco); border: 1px solid var(--crema-oscura); border-radius: 20px; padding: 28px 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 2px 12px var(--sombra); transition: box-shadow 0.2s; }
   .testi-card:hover { box-shadow: 0 6px 24px var(--sombra); }
   .testi-stars { color: #e9a800; font-size: 0.85rem; letter-spacing: 2px; }
-
-  .testi-quote {
-    font-size: 0.92rem; line-height: 1.75;
-    color: var(--texto-suave); flex: 1; font-style: italic;
-  }
-
-  .testi-author {
-    display: flex; align-items: center; gap: 12px;
-    padding-top: 12px; border-top: 1px solid var(--crema-oscura);
-  }
-
-  .testi-avatar {
-    width: 44px; height: 44px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 1rem; color: var(--blanco); flex-shrink: 0;
-    overflow: hidden;
-    background: linear-gradient(135deg, var(--verde-medio), var(--verde-acento));
-  }
-
+  .testi-quote { font-size: 0.92rem; line-height: 1.75; color: var(--texto-suave); flex: 1; font-style: italic; }
+  .testi-author { display: flex; align-items: center; gap: 12px; padding-top: 12px; border-top: 1px solid var(--crema-oscura); }
+  .testi-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: var(--blanco); flex-shrink: 0; overflow: hidden; background: linear-gradient(135deg, var(--verde-medio), var(--verde-acento)); }
   .testi-name { font-weight: 600; font-size: 0.9rem; color: var(--texto); }
   .testi-desc { font-size: 0.76rem; color: var(--texto-claro); }
-
-  .testi-tag {
-    font-size: 0.68rem;
-    background: var(--verde-suave); color: var(--verde-medio);
-    padding: 3px 10px; border-radius: 100px; font-weight: 600; margin-left: auto;
-  }
+  .testi-tag { font-size: 0.66rem; padding: 3px 10px; border-radius: 100px; font-weight: 600; margin-left: auto; white-space: nowrap; }
+  .tag-espalda { background: var(--verde-suave); color: var(--verde-medio); }
+  .tag-rodilla { background: #fdf3d8; color: #a97c14; }
 
   /* ─── SOBRE MJ ────────────────────────────────────── */
   .sobre-mj { background: var(--blanco); }
-
-  .mj-card {
-    background: var(--crema); border: 1px solid var(--crema-oscura);
-    border-radius: 24px; padding: 44px;
-    display: flex; gap: 36px; align-items: flex-start; margin-top: 40px;
-  }
-
-  .mj-foto {
-    width: 100px; height: 100px; border-radius: 50%;
-    object-fit: cover; object-position: center top;
-    flex-shrink: 0;
-    border: 3px solid var(--verde-borde);
-  }
-
-  .mj-inicial {
-    width: 84px; height: 84px;
-    background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-acento));
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem; font-weight: 700; color: var(--blanco); flex-shrink: 0;
-    overflow: hidden;
-  }
-
+  .mj-card { background: var(--crema); border: 1px solid var(--crema-oscura); border-radius: 24px; padding: 44px; display: flex; gap: 36px; align-items: flex-start; margin-top: 40px; }
+  .mj-foto { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; border: 3px solid var(--verde-borde); }
+  .mj-inicial { width: 84px; height: 84px; background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-acento)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--blanco); flex-shrink: 0; overflow: hidden; }
   .mj-texto h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--texto); margin-bottom: 4px; }
   .mj-credencial { font-size: 0.78rem; color: var(--verde-medio); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 16px; }
   .mj-texto p { font-size: 0.95rem; color: var(--texto-suave); line-height: 1.75; margin-bottom: 12px; }
+  .mj-diferencia { display: inline-block; background: var(--verde-suave); border: 1px solid var(--verde-borde); border-radius: 12px; padding: 14px 18px; font-size: 0.88rem; color: var(--verde-oscuro); font-weight: 500; margin-top: 8px; line-height: 1.6; }
+  @media (max-width: 580px) { .mj-card { flex-direction: column; padding: 28px 20px; gap: 20px; } }
 
-  .mj-diferencia {
-    display: inline-block;
-    background: var(--verde-suave); border: 1px solid var(--verde-borde);
-    border-radius: 12px; padding: 14px 18px;
-    font-size: 0.88rem; color: var(--verde-oscuro); font-weight: 500; margin-top: 8px; line-height: 1.6;
-  }
-
-  @media (max-width: 580px) {
-    .mj-card { flex-direction: column; padding: 28px 20px; gap: 20px; }
-  }
-
-  /* ─── PRECIO ──────────────────────────────────────── */
+  /* ─── ELEGÍ TU PROTOCOLO (3 tarjetas) ────────────── */
   .precio-cta { background: var(--verde-oscuro); text-align: center; }
   .precio-cta h2 { color: #fff; }
   .precio-cta .lead { color: rgba(255,255,255,0.65); margin: 0 auto; }
 
-  .precio-box {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(76,175,125,0.3);
-    border-radius: 28px; padding: 48px 40px;
-    max-width: 540px; margin: 40px auto 0;
-  }
+  .precios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 980px; margin: 44px auto 0; align-items: stretch; }
+  @media (max-width: 900px) { .precios-grid { grid-template-columns: 1fr; max-width: 440px; } }
 
-  .precio-tachado { font-size: 0.95rem; color: rgba(255,255,255,0.35); text-decoration: line-through; margin-bottom: 4px; }
+  .precio-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(76,175,125,0.3); border-radius: 24px; padding: 36px 28px; display: flex; flex-direction: column; text-align: left; position: relative; }
+  .precio-card.destacada { background: linear-gradient(160deg, rgba(76,175,125,0.18), rgba(255,255,255,0.06)); border: 2px solid var(--verde-acento); }
+  .precio-ribbon { position: absolute; top: -13px; left: 28px; background: #f5c842; color: #1a1a1a; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; }
+  .precio-card-nombre { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--verde-acento); margin-bottom: 10px; }
+  .precio-card-monto { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 6px; }
+  .precio-card-monto span { font-size: 1rem; font-weight: 400; }
+  .precio-card-desc { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 22px; line-height: 1.55; min-height: 42px; }
+  .precio-card-incluye { list-style: none; margin-bottom: 26px; flex: 1; }
+  .precio-card-incluye li { font-size: 0.85rem; color: rgba(255,255,255,0.78); padding: 7px 0; display: flex; gap: 8px; align-items: flex-start; }
+  .precio-card-incluye li::before { content: '✓'; color: var(--verde-acento); font-weight: 700; flex-shrink: 0; }
+  .precio-card .btn-wa { width: 100%; padding: 14px 18px; font-size: 0.9rem; }
 
-  .precio-actual {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.8rem; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 4px;
-  }
+  .precio-tachado { font-size: 0.85rem; color: rgba(255,255,255,0.35); text-decoration: line-through; }
 
-  .precio-desc { font-size: 0.83rem; color: rgba(255,255,255,0.45); margin-bottom: 32px; }
-
-  .garantia-pill {
-    display: flex; align-items: center; gap: 12px;
-    background: rgba(76,175,125,0.12); border: 1px solid rgba(76,175,125,0.25);
-    border-radius: 14px; padding: 16px 20px; margin-top: 24px; text-align: left;
-  }
-
+  .garantia-pill { display: flex; align-items: center; gap: 12px; background: rgba(76,175,125,0.12); border: 1px solid rgba(76,175,125,0.25); border-radius: 14px; padding: 18px 22px; margin: 36px auto 0; text-align: left; max-width: 620px; }
   .garantia-pill .g-icon { font-size: 1.7rem; flex-shrink: 0; }
   .garantia-pill strong { display: block; font-size: 0.88rem; color: #fff; margin-bottom: 2px; }
   .garantia-pill span { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
@@ -797,90 +271,56 @@
   .faq { background: var(--blanco); }
   .faq-list { margin-top: 40px; }
   .faq-item { border-bottom: 1px solid var(--crema-oscura); }
-
-  .faq-pregunta {
-    width: 100%; background: none; border: none;
-    color: var(--texto); font-family: 'DM Sans', sans-serif;
-    font-size: 0.97rem; font-weight: 500;
-    padding: 20px 0; text-align: left; cursor: pointer;
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
-  }
-
+  .faq-pregunta { width: 100%; background: none; border: none; color: var(--texto); font-family: 'DM Sans', sans-serif; font-size: 0.97rem; font-weight: 500; padding: 20px 0; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
   .faq-icon { font-size: 1.3rem; color: var(--verde-medio); transition: transform 0.2s; flex-shrink: 0; }
   .faq-pregunta.open .faq-icon { transform: rotate(45deg); }
-
-  .faq-respuesta {
-    display: none; padding-bottom: 20px;
-    font-size: 0.92rem; color: var(--texto-suave); line-height: 1.75;
-  }
-
+  .faq-respuesta { display: none; padding-bottom: 20px; font-size: 0.92rem; color: var(--texto-suave); line-height: 1.75; }
   .faq-respuesta.open { display: block; }
 
   /* ─── FOOTER ──────────────────────────────────────── */
-  footer {
-    background: var(--crema-oscura); text-align: center;
-    padding: 40px 24px; font-size: 0.79rem; color: var(--texto-claro);
-    border-top: 1px solid var(--crema-oscura);
-  }
-
+  footer { background: var(--crema-oscura); text-align: center; padding: 40px 24px; font-size: 0.79rem; color: var(--texto-claro); border-top: 1px solid var(--crema-oscura); }
   footer a { color: var(--verde-medio); text-decoration: none; }
 
   /* ─── MOBILE CTA FLOAT ────────────────────────────── */
   .cta-float { position: fixed; bottom: 20px; right: 20px; z-index: 999; display: none; }
-
-  .cta-float a {
-    display: flex; align-items: center; gap: 8px;
-    background: #25D366; color: #fff;
-    font-weight: 600; font-size: 0.88rem;
-    padding: 14px 22px; border-radius: 100px;
-    text-decoration: none;
-    box-shadow: 0 6px 24px rgba(37,211,102,0.35);
-  }
+  .cta-float a { display: flex; align-items: center; gap: 8px; background: #25D366; color: #fff; font-weight: 600; font-size: 0.88rem; padding: 14px 22px; border-radius: 100px; text-decoration: none; box-shadow: 0 6px 24px rgba(37,211,102,0.35); }
 
   @media (max-width: 768px) {
     .cta-float { display: block; }
     section { padding: 64px 20px; }
-    .precio-box { padding: 32px 20px; }
     .ciclo-grid { grid-template-columns: 1fr 1fr; }
-    .stats-inner { gap: 28px; }
+    .stats-inner { gap: 26px; }
+    .real-grid { grid-template-columns: 1fr 1fr; }
   }
-
-  @media (max-width: 460px) {
-    .ciclo-grid { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 460px) { .ciclo-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
 <!-- ══════════════════════════════════
-     HERO SPLIT
+     HERO SPLIT — UNIFICADO
 ══════════════════════════════════ -->
 <section class="hero">
 
-  <!-- IZQUIERDA: Texto -->
   <div class="hero-left">
-    <span class="chip">🦴 Para dolor de espalda y cuello · Protocolo de 28 días</span>
+    <span class="chip">🌿 Espalda · Cuello · Cadera · Rodilla — protocolos con base científica</span>
 
     <h1>
       Si probaste de todo<br>
-      para tu <span class="dolor-highlight">espalda y cuello</span><br>
-      y el dolor siempre vuelve —<br>
+      para tu <span class="dolor-highlight">dolor crónico</span><br>
+      y siempre vuelve —<br>
       <em>esta app es para vos.</em>
     </h1>
 
     <p class="hero-bajada">
       Masajes, pastillas, reposo, fisio, "fuerza de core" —
       <strong>si nada te duró, es porque ninguno te acompañó después.</strong>
-      DolorConCiencia es la app que está con vos los 28 días: conoce tu caso, registra cómo estás cada mañana y te dice exactamente qué hacer para tu espalda y cuello hoy. Sin improvisar. Sin olvidar dónde ibas.
+      DolorConCiencia son dos protocolos guiados por app — uno para espalda y cuello, otro para cadera y rodilla — que conocen tu caso, registran cómo estás cada día y te dicen exactamente qué hacer. Sin improvisar. Sin olvidar dónde ibas.
     </p>
 
-    <p class="hero-bajada" style="margin-top:0.5rem; font-size:0.97em; opacity:0.88;">
-      <strong>28 días para crear el hábito.</strong> Porque tu columna y tu cuello te van a acompañar toda la vida — y merecen que los cuides de por vida.
-    </p>
-
-    <a class="btn-wa" href="https://wa.me/542494205535?text=Hola!%20Vi%20la%20página%20de%20la%20app%20DolorConCiencia%20y%20quiero%20saber%20más%20🌿" target="_blank">
+    <a class="btn-wa" href="https://wa.me/542494205535?text=Hola!%20Vi%20la%20página%20de%20DolorConCiencia%20y%20quiero%20saber%20más%20🌿" target="_blank">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Escribime y te cuento cómo funciona
+      Escribime y te cuento cuál protocolo es para vos
     </a>
 
     <p class="hero-micro">✔ Garantía de 7 días · Acceso inmediato · Sin descargar nada del store</p>
@@ -894,30 +334,13 @@
     </div>
   </div>
 
-  <!-- DERECHA: Imagen + phone flotante -->
   <div class="hero-right">
-    <img class="hero-right-bg"
-      src="Imagenes de la app/hero_yoga_mockups_v2.jpg"
-      alt="Persona usando la app DolorConCiencia">
+    <img class="hero-right-bg" src="Imagenes de la app/hero_real_estiramiento.jpg" alt="Mujer real haciendo un estiramiento en su casa, siguiendo su rutina desde el celular">
     <div class="hero-right-overlay"></div>
-
   </div>
 
 </section>
 
-<!-- ══════════════════════════════════
-     CROSS-SELL: RODILLA Y CADERA
-══════════════════════════════════ -->
-<div style="background:linear-gradient(135deg, var(--verde-suave), var(--verde-borde)); border-top:3px solid var(--verde-medio); border-bottom:3px solid var(--verde-medio); padding:26px 24px; text-align:center;">
-  <a href="#rodilla-cadera" style="display:inline-flex; align-items:center; gap:16px; text-decoration:none; max-width:880px; margin:0 auto; justify-content:center; flex-wrap:wrap;">
-    <span style="font-size:2.2rem; line-height:1;">🦵</span>
-    <span style="font-size:1.05rem; color:var(--verde-oscuro); line-height:1.55; text-align:left;">
-      <strong style="font-size:1.1rem;">¿Tu dolor es de rodilla o cadera, no de espalda o cuello?</strong><br>
-      <span style="color:var(--texto-suave);">Tenemos un protocolo específico de 14 días, con su propia app —</span>
-      <span style="font-weight:700; text-decoration:underline; color:var(--verde-medio);">mirá el programa completo ↓</span>
-    </span>
-  </a>
-</div>
 
 <!-- ══════════════════════════════════
      STATS
@@ -925,27 +348,27 @@
 <div class="stats-strip">
   <div class="stats-inner">
     <div class="stat-item">
-      <div class="stat-num">28</div>
-      <div class="stat-desc">días — con un motivo para cada uno</div>
+      <div class="stat-num">2</div>
+      <div class="stat-desc">protocolos — espalda/cuello y cadera/rodilla</div>
     </div>
     <div class="stat-item">
       <div class="stat-num">15'</div>
       <div class="stat-desc">minutos al día, en tu casa, sin nada especial</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">10</div>
-      <div class="stat-desc">beta testers reales que lo probaron primero</div>
+      <div class="stat-num">20+</div>
+      <div class="stat-desc">beta testers reales que lo probaron antes que vos</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">3</div>
-      <div class="stat-desc">fases — soltar, fortalecer, integrar</div>
+      <div class="stat-num">28/14</div>
+      <div class="stat-desc">días de programa, según tu caso</div>
     </div>
   </div>
 </div>
 
 
 <!-- ══════════════════════════════════
-     VIDEOS
+     ANTES / DESPUÉS
 ══════════════════════════════════ -->
 <section class="videos-section">
   <div class="container">
@@ -956,7 +379,7 @@
     <div class="videos-grid">
       <div class="video-card">
         <div class="video-wrap">
-          <video controls muted loop playsinline>
+          <video controls muted loop playsinline preload="metadata">
             <source src="videos/video_antes.mp4" type="video/mp4">
           </video>
         </div>
@@ -967,18 +390,18 @@
       </div>
       <div class="video-card">
         <div class="video-wrap">
-          <video controls muted loop playsinline>
+          <video controls muted loop playsinline preload="metadata">
             <source src="videos/video_despues.mp4" type="video/mp4">
           </video>
         </div>
         <div class="video-caption">
           <strong>Con la app</strong>
-          15 minutos al día. 28 días. El mismo cuerpo — pero que aprendió a moverse sin dolor. Eso es lo que entrena DolorConCiencia.
+          15 minutos al día. El mismo cuerpo — pero que aprendió a moverse sin dolor. Eso es lo que entrena DolorConCiencia.
         </div>
       </div>
       <div class="video-card">
         <div class="video-wrap">
-          <video autoplay muted loop playsinline controls>
+          <video controls muted loop playsinline preload="metadata">
             <source src="videos/video_app.mp4" type="video/mp4">
           </video>
         </div>
@@ -987,48 +410,59 @@
           Tu racha, el ejercicio del día, el gráfico de cómo baja tu dolor semana a semana. Se siente como un juego — uno que te sana de verdad.
         </div>
       </div>
+      <div class="video-card">
+        <div class="video-wrap">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="Contenido rodilla y cadera/estiramiento con la app en el piso.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-caption">
+          <strong>Protocolo Rodilla y Cadera</strong>
+          La app al lado, en el piso, siguiendo el ejercicio paso a paso.
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 
 <!-- ══════════════════════════════════
-     APP SCREENS SHOWCASE
+     MIRÁ ADENTRO — UNIFICADO
 ══════════════════════════════════ -->
 <section class="app-screens">
   <div class="container">
     <span class="label">Mirá adentro</span>
     <h2>Así se ve cada mañana<br>cuando la abrís.</h2>
-    <p class="lead">La pantalla de inicio te muestra tu racha, tu nivel de dolor de hoy y qué toca hacer. Entrás al ejercicio: hay un video, las instrucciones paso a paso, el tip de por qué funciona, y el temporizador. Terminás, marcás el día como completo. Así de simple.</p>
+    <p class="lead">La pantalla de inicio te muestra tu racha, tu nivel de dolor de hoy y qué toca hacer. Entrás al ejercicio: hay un video, las instrucciones paso a paso, el tip de por qué funciona, y el temporizador. Terminás, marcás el día como completo. Así de simple — en las dos apps.</p>
 
     <div class="screens-scroll">
       <div class="screen-card">
-        <img src="Imagenes de la app/app_home_screen.jpg" alt="Pantalla inicio — Buen día, Majo. Día 10 de 28. Tu progreso 32%." onclick="openLightbox('Imagenes de la app/app_home_screen.jpg')" style="cursor:pointer;">
-        <div class="screen-label">
-          <strong>Pantalla de inicio</strong>
-          Racha, progreso y check-in de dolor diario
-        </div>
+        <img src="Imagenes de la app/app_home_screen.jpg" alt="Pantalla inicio espalda — Buen día, Majo. Día 9 de 28. Progreso 29%." onclick="openLightbox('Imagenes de la app/app_home_screen.jpg')" style="cursor:pointer;">
+        <div class="screen-label"><span class="screen-badge badge-espalda">Espalda y cuello</span><br><strong>Pantalla de inicio</strong>Racha, progreso y check-in de dolor diario</div>
       </div>
       <div class="screen-card">
-        <img src="Imagenes de la app/app_exercise_day.jpg" alt="Ejercicios del día — Puente de cadera, Bird-Dog, Fuerza profunda" onclick="openLightbox('Imagenes de la app/app_exercise_day.jpg')" style="cursor:pointer;">
-        <div class="screen-label">
-          <strong>Tus ejercicios de hoy</strong>
-          Nombre, duración y consejo ergonómico
-        </div>
+        <img src="Imagenes de la app/app_exercise_day.jpg" alt="Ejercicios del día espalda — La columna que sostiene" onclick="openLightbox('Imagenes de la app/app_exercise_day.jpg')" style="cursor:pointer;">
+        <div class="screen-label"><span class="screen-badge badge-espalda">Espalda y cuello</span><br><strong>Tus ejercicios de hoy</strong>Video, tip científico y temporizador</div>
       </div>
       <div class="screen-card">
-        <img src="Imagenes de la app/ejercicio_deadbug_app.jpg" alt="Paola haciendo Dead Bug con la pantalla de la app visible" onclick="openLightbox('Imagenes de la app/ejercicio_deadbug_app.jpg')" style="cursor:pointer;">
-        <div class="screen-label">
-          <strong>La app mientras lo hacés</strong>
-          Instrucciones, tip científico y temporizador al lado tuyo
-        </div>
+        <img src="Imagenes de la app/IMAGENES SIN MARCAS DE AGUA/ejercicio_deadbug_app.jpg" alt="Paola haciendo Dead Bug con la pantalla de la app visible" onclick="openLightbox('Imagenes de la app/IMAGENES SIN MARCAS DE AGUA/ejercicio_deadbug_app.jpg')" style="cursor:pointer;">
+        <div class="screen-label"><span class="screen-badge badge-espalda">Espalda y cuello</span><br><strong>La app mientras lo hacés</strong>Instrucciones al lado tuyo, en vivo</div>
       </div>
       <div class="screen-card">
-        <img src="Imagenes de la app/IMAGENES SIN MARCAS DE AGUA/hero_sosteniendo_app.jpg" alt="Mi perfil — perfil postural complejo, guía 28 días, progreso personal" onclick="openLightbox('Imagenes de la app/IMAGENES SIN MARCAS DE AGUA/hero_sosteniendo_app.jpg')" style="cursor:pointer;">
-        <div class="screen-label">
-          <strong>Mi perfil</strong>
-          Tu tipo postural, guía asignada y puntos XP
-        </div>
+        <img src="assets/ventas_rodilla/mock_home_dashboard.png" alt="Pantalla de inicio rodilla y cadera — Día 4 de 14, 21% de progreso" onclick="openLightbox('assets/ventas_rodilla/mock_home_dashboard.png')" style="cursor:pointer;">
+        <div class="screen-label"><span class="screen-badge badge-rodilla">Cadera y rodilla</span><br><strong>Pantalla de inicio</strong>Tu perfil, tu racha y tu progreso de 14 días</div>
+      </div>
+      <div class="screen-card">
+        <img src="assets/ventas_rodilla/mock_dia_completado.png" alt="Ejercicio del día rodilla y cadera — la ciencia detrás explicada simple" onclick="openLightbox('assets/ventas_rodilla/mock_dia_completado.png')" style="cursor:pointer;">
+        <div class="screen-label"><span class="screen-badge badge-rodilla">Cadera y rodilla</span><br><strong>Cada día, con su porqué</strong>La ciencia detrás de cada ejercicio</div>
+      </div>
+      <div class="screen-card">
+        <img src="assets/ventas_rodilla/mock_programa.png" alt="Tu programa rodilla y cadera — 14 días, Fase 1 y Fase 2" onclick="openLightbox('assets/ventas_rodilla/mock_programa.png')" style="cursor:pointer;">
+        <div class="screen-label"><span class="screen-badge badge-rodilla">Cadera y rodilla</span><br><strong>Tu programa completo</strong>14 días organizados en 2 fases</div>
+      </div>
+      <div class="screen-card">
+        <img src="assets/ventas_rodilla/mock_trivia_v2.png" alt="Trivia interactiva sobre neurociencia del dolor dentro de la app" onclick="openLightbox('assets/ventas_rodilla/mock_trivia_v2.png')" style="cursor:pointer;">
+        <div class="screen-label"><span class="screen-badge badge-rodilla">Cadera y rodilla</span><br><strong>Aprendés mientras avanzás</strong>Trivias para demostrar lo que entendiste</div>
       </div>
     </div>
     <p style="font-size:0.78rem; color:rgba(255,255,255,0.3); margin-top:8px; text-align:center;">← Deslizá · Hacé clic para ampliar</p>
@@ -1037,41 +471,55 @@
 
 
 <!-- ══════════════════════════════════
-     PERSONAS REALES
+     PERSONAS REALES — MEZCLADO
 ══════════════════════════════════ -->
 <section class="real-users">
   <div class="container">
     <span class="label">Personas reales, no actores</span>
     <h2>De 20 a 69 años.<br>En su cama, en su cocina, en el parque.</h2>
-    <p class="lead">Estas fotos no son de stock. Son personas que usaron la app antes de que saliera al público. Diego la hacía acostado en la cama con el celular al lado. Paola hacía el Dead Bug con las instrucciones a la vista. Yani la usa todos los días desde su casa. Susana, 69 años, pensaba que ya era tarde.</p>
+    <p class="lead">Estas fotos no son de stock. Son personas que usaron la app antes de que saliera al público — de los dos protocolos. Diego la hacía acostado en la cama con el celular al lado. Carlos hace sus sentadillas guiadas en casa. Susana, 69 años, pensaba que ya era tarde.</p>
 
     <div class="real-grid">
       <div class="real-card">
         <img src="Imagenes de la app/tester_diego_respiracion.jpg" alt="Diego haciendo escaneo corporal acostado con la app al lado mostrando el temporizador">
         <div class="real-card-caption">
           <strong>Diego · Vendedor · hernias discales</strong>
-          <span>La app al lado, el temporizador corriendo. Escaneo corporal desde la cama.</span>
+          <span>Espalda y cuello — escaneo corporal desde la cama</span>
         </div>
       </div>
       <div class="real-card">
         <img src="Imagenes de la app/ejercicio_deadbug_app.jpg" alt="Paola haciendo Dead Bug con la pantalla de la app mostrando el ejercicio exacto">
         <div class="real-card-caption">
           <strong>Paola · Administrativa</strong>
-          <span>Dead Bug progresión — la app muestra las instrucciones exactas mientras lo hace</span>
+          <span>Espalda y cuello — Dead Bug con instrucciones en vivo</span>
         </div>
       </div>
       <div class="real-card">
-        <img src="Imagenes de la app/tester_anai_app.jpg" alt="Yani usando la app DolorConCiencia desde su casa">
+        <img src="Contenido rodilla y cadera/Carlos, haciendo sentadilla.png" alt="Carlos haciendo sentadilla en casa siguiendo la app">
         <div class="real-card-caption">
-          <strong>Yani · Yanina Anai</strong>
-          <span>Su perfil personalizado en pantalla — la app que se adapta a ella, no al revés</span>
+          <strong>Carlos</strong>
+          <span>Cadera y rodilla — sentadilla guiada, en su casa</span>
         </div>
       </div>
       <div class="real-card">
         <img src="Imagenes de la app/tester_susana_estiramiento.jpg" alt="Susana, 69 años, haciendo estiramiento en casa">
         <div class="real-card-caption">
           <strong>Susana, 69 años · Jubilada</strong>
-          <span>"Pensé que ya era tarde para mejorar mis dolores"</span>
+          <span>"Pensé que ya era tarde para mejorar"</span>
+        </div>
+      </div>
+      <div class="real-card">
+        <img src="Contenido rodilla y cadera/matrimonio estirando con la app.png" alt="Matrimonio estirando juntos al aire libre siguiendo el protocolo">
+        <div class="real-card-caption">
+          <strong>Matrimonio, beta testers</strong>
+          <span>Cadera y rodilla — estirando juntos al aire libre</span>
+        </div>
+      </div>
+      <div class="real-card">
+        <img src="Imagenes de la app/tester_anai_app.jpg" alt="Yani usando la app DolorConCiencia desde su casa">
+        <div class="real-card-caption">
+          <strong>Yani · Maestra de grado</strong>
+          <span>Espalda y cuello — su perfil personalizado en pantalla</span>
         </div>
       </div>
     </div>
@@ -1080,132 +528,45 @@
 
 
 <!-- ══════════════════════════════════
-     CÓMO FUNCIONA EN 4 PASOS
-══════════════════════════════════ -->
-<section class="como-funciona">
-  <div class="container">
-    <span class="label">Así arranca</span>
-    <h2>Del pago al Día 1<br>en menos de 10 minutos.</h2>
-    <p class="lead">No hay que esperar que te mandemos nada ni configurar nada raro. Acá te cuento cómo es el proceso paso a paso, para que no haya sorpresas.</p>
-
-    <div class="pasos-grid">
-
-      <div class="paso">
-        <div class="paso-num">1</div>
-        <h3>Me escribís por WhatsApp</h3>
-        <p>Te mando el link de Hotmart. Pago único, acceso inmediato — no hay que esperar nada.</p>
-      </div>
-
-      <div class="paso">
-        <div class="paso-num">2</div>
-        <h3>Armás tu perfil</h3>
-        <p>La app te hace 8 preguntas: dónde te duele, cómo trabajás, qué tan activo sos. Con eso arma <strong>tu perfil de dolor personalizado</strong> — no uno genérico.</p>
-        <div class="paso-app-screen">
-          <img src="Imagenes de la app/app_home_screen.jpg" alt="Pantalla inicio app">
-        </div>
-      </div>
-
-      <div class="paso">
-        <div class="paso-num">3</div>
-        <h3>Empezás el Día 1</h3>
-        <p>La app te muestra qué ejercicios tocan hoy, con video, instrucciones paso a paso y temporizador. Sin buscar nada.</p>
-        <div class="paso-app-screen">
-          <img src="Imagenes de la app/app_exercise_day.jpg" alt="Ejercicios del día">
-        </div>
-      </div>
-
-      <div class="paso">
-        <div class="paso-num">4</div>
-        <h3>Ves cómo baja</h3>
-        <p>Cada mañana registrás tu dolor del 0 al 10. En pocas semanas ya podés ver el gráfico — y los números te dicen más que cualquier sensación.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════
-     PREVIEW DE LA GUÍA
-══════════════════════════════════ -->
-<section class="preview-guia">
-  <div class="container">
-    <span class="label">Una vuelta por adentro</span>
-    <h2>Esto es lo que te encontrás<br>cuando empezás.</h2>
-    <p class="lead">La app te pregunta dónde trabajás, cómo te movés y dónde te duele — y desde ahí arma tu perfil. No es un programa genérico: es uno que sabe que vos no sos igual que el de al lado. La guía PDF que viene con el bundle te queda como respaldo para repasar cualquier ejercicio, incluso sin señal.</p>
-
-    <div class="preview-scroll">
-      <div class="preview-page" onclick="openLightbox('guia_preview_p1.jpg')">
-        <img src="guia_preview_p1.jpg" alt="Portada — Protocolo 28 Días Espalda y Cuello, 59 páginas, 43 ilustraciones" loading="lazy">
-      </div>
-      <div class="preview-page" onclick="openLightbox('guia_preview_p2.jpg')">
-        <img src="guia_preview_p2.jpg" alt="Señales de alarma — cuándo consultar un médico antes de arrancar" loading="lazy">
-      </div>
-      <div class="preview-page" onclick="openLightbox('guia_preview_p3.jpg')">
-        <img src="guia_preview_p3.jpg" alt="Ejercicios ilustrados paso a paso con consejo del fisioterapeuta y modificación si hay dificultad" loading="lazy">
-      </div>
-      <div class="preview-page" onclick="openLightbox('guia_preview_p4.jpg')">
-        <img src="guia_preview_p4.jpg" alt="Fase 2 — La Reconstrucción: fuerza, estabilidad y control motor progresivo" loading="lazy">
-      </div>
-      <div class="preview-page" onclick="openLightbox('guia_preview_p5.jpg')">
-        <img src="guia_preview_p5.jpg" alt="Día 7 — Mirá lo que construiste: checkpoint de progreso a la semana" loading="lazy">
-      </div>
-      <!-- Screenshots reales de la app -->
-      <div class="preview-page" onclick="openLightbox('Imagenes de la app/app_home_screen.jpg')">
-        <img src="Imagenes de la app/app_home_screen.jpg" alt="App — Pantalla de inicio con racha y progreso diario" loading="lazy">
-      </div>
-      <div class="preview-page" onclick="openLightbox('Imagenes de la app/app_exercise_day.jpg')">
-        <img src="Imagenes de la app/app_exercise_day.jpg" alt="App — Ejercicios del día con consejo ergonómico" loading="lazy">
-      </div>
-      <div class="preview-page" onclick="openLightbox('Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (3).jpeg')">
-        <img src="Imagenes de la app/CAPTURA DE LA APP/WhatsApp Image 2026-06-09 at 3.18.31 PM (3).jpeg" alt="App — Detalle ejercicio: video + instrucciones + tip + temporizador" loading="lazy">
-      </div>
-    </div>
-    <p style="font-size:0.8rem; color:var(--texto-claro); margin-top:12px; text-align:center;">← Deslizá · Hacé clic para ampliar cualquier página</p>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════
-     ¿TE IDENTIFICÁS?
+     ¿TE SUENA? — UNIFICADO
 ══════════════════════════════════ -->
 <section class="identificas">
   <div class="container">
     <span class="label">¿Te suena?</span>
     <h2>No importa cómo trabajás.<br>Si tu cuerpo te cobra el día, esto es para vos.</h2>
-    <p class="lead">Ocho horas en una silla, parado todo el día, cargando cosas, inclinado sobre alguien — el cuerpo acumula de todas las formas.</p>
+    <p class="lead">Ocho horas en una silla, parado todo el día, cargando cosas, en cuclillas, subiendo escaleras — el cuerpo acumula de todas las formas, y no siempre duele donde uno espera.</p>
 
     <div class="perfiles-grid">
       <div class="perfil-card">
         <div class="emoji">💻</div>
         <h3>Trabajo frente a pantalla</h3>
-        <p>El nudo entre los omóplatos que no cierra. La cintura que se agarrota a las 3 horas. El pinchazo en el sacro sin razón aparente.</p>
+        <p>El nudo entre los omóplatos que no cierra. La cintura agarrotada. El pinchazo en el sacro sin razón aparente.</p>
       </div>
       <div class="perfil-card">
         <div class="emoji">🏗️</div>
         <h3>Trabajo físico o de carga</h3>
-        <p>Albañiles, mecánicos, repartidores. La espalda baja que absorbe todo el esfuerzo que debería repartirse por el cuerpo.</p>
+        <p>Albañiles, mecánicos, repartidores. La espalda baja y las rodillas absorben todo el esfuerzo que debería repartirse.</p>
       </div>
       <div class="perfil-card">
         <div class="emoji">🏫</div>
         <h3>Trabajo de pie o inclinado</h3>
-        <p>Docentes, cosmiatra, peluqueros, enfermeros. El trapecio duro como piedra y las migrañas que vienen del cuello.</p>
+        <p>Docentes, enfermeros, peluqueros. El trapecio duro como piedra, las rodillas que se resienten al final del día.</p>
       </div>
       <div class="perfil-card">
-        <div class="emoji">📋</div>
-        <h3>Trabajo administrativo</h3>
-        <p>Largos días de oficina. La tensión que sube desde la cintura hasta el cuello y no baja ni con analgésicos.</p>
+        <div class="emoji">🚶</div>
+        <h3>Menos movilidad que antes</h3>
+        <p>Subir escaleras, levantarte de la silla, caminar distancias — cosas que antes no pensabas y ahora te frenan.</p>
       </div>
     </div>
 
     <div class="dolor-lista">
       <p class="dolor-titulo">¿Esto te pasó?</p>
       <div class="dolor-items">
-        <div class="dolor-item">Fuiste al médico. Te dijeron "es postural" y te mandaron a casa.</div>
+        <div class="dolor-item">Fuiste al médico. Te dijeron "es de la edad" o "es postural" y te mandaron a casa.</div>
         <div class="dolor-item">Masajes, pastillas, reposo — mejora unos días y vuelve exactamente igual.</div>
-        <div class="dolor-item">La resonancia salió bien. Y sin embargo seguís doliendo. No tiene sentido.</div>
+        <div class="dolor-item">La resonancia o la radiografía salieron bien. Y sin embargo seguís doliendo. No tiene sentido.</div>
         <div class="dolor-item">Tenés dolores de cabeza que los analgésicos no tocan — probablemente vienen del cuello.</div>
-        <div class="dolor-item">El dolor baja por la pierna o te traba el brazo. Y eso da más miedo todavía.</div>
+        <div class="dolor-item">Evitás las escaleras, el piso, sentarte con las piernas cruzadas — por miedo a la rodilla o la cadera.</div>
         <div class="dolor-item">Con la fisio mejorás — pero en cuanto parás, vuelve todo. Siempre vuelve.</div>
       </div>
     </div>
@@ -1214,7 +575,7 @@
 
 
 <!-- ══════════════════════════════════
-     EL CÍRCULO VICIOSO
+     POR QUÉ SIEMPRE VUELVE
 ══════════════════════════════════ -->
 <section class="circulo">
   <div class="container">
@@ -1241,16 +602,16 @@
       <div class="ciclo-step">
         <div class="ciclo-num">04</div>
         <h3>El dolor vuelve</h3>
-        <p>La musculatura que sostiene tu columna sigue débil. El sistema nervioso sigue en modo alarma.</p>
+        <p>La musculatura que sostiene la articulación sigue débil. El sistema nervioso sigue en modo alarma.</p>
       </div>
     </div>
 
     <div class="ciclo-ruptura">
       <p>
-        <strong>La evidencia científica lo dice hace años:</strong> el reposo prolongado no cura el dolor de espalda.
+        <strong>La evidencia científica lo dice hace años:</strong> el reposo prolongado no cura el dolor crónico — sea de espalda, cuello, cadera o rodilla.
         El movimiento correcto, progresivo y con base en cómo funciona tu cuerpo — ese sí lo resuelve.
         <br><br>
-        Eso es lo que hace este protocolo. No alivia. <strong>Corta el ciclo.</strong>
+        Eso es lo que hacen estos protocolos. No alivian. <strong>Cortan el ciclo.</strong>
       </p>
     </div>
   </div>
@@ -1258,7 +619,7 @@
 
 
 <!-- ══════════════════════════════════
-     FRANJA CIENTÍFICA
+     POR QUÉ FUNCIONA
 ══════════════════════════════════ -->
 <div class="ciencia-strip">
   <div class="ciencia-inner">
@@ -1269,25 +630,25 @@
       <div class="ciencia-card">
         <div class="c-icon">🧠</div>
         <h4>El dolor crónico es neurológico</h4>
-        <p>El 80% del dolor de espalda crónico es sensibilización central — el sistema nervioso aprende a doler. Los ejercicios de estabilización + re-educación del movimiento revierten ese aprendizaje.</p>
+        <p>Gran parte del dolor crónico es sensibilización central — el sistema nervioso aprende a doler. Los ejercicios de control motor y re-educación del movimiento revierten ese aprendizaje.</p>
         <span class="c-ref">Moseley & Butler, 2015 · Explain Pain</span>
       </div>
       <div class="ciencia-card">
         <div class="c-icon">💪</div>
-        <h4>Estabilización > analgésicos a largo plazo</h4>
-        <p>Los ejercicios de estabilización del core profundo reducen el dolor lumbar crónico de forma más efectiva y duradera que los antiinflamatorios y el reposo.</p>
+        <h4>Fuerza y estabilidad > analgésicos a largo plazo</h4>
+        <p>Los ejercicios de estabilización y fortalecimiento progresivo reducen el dolor articular crónico de forma más efectiva y duradera que los antiinflamatorios y el reposo.</p>
         <span class="c-ref">Stuart McGill, PhD · Univ. de Waterloo</span>
       </div>
       <div class="ciencia-card">
         <div class="c-icon">🔄</div>
         <h4>El movimiento es la medicina</h4>
-        <p>Las guías clínicas internacionales recomiendan el movimiento activo y progresivo como primera línea de tratamiento para el dolor lumbar y cervical no específico.</p>
+        <p>Las guías clínicas internacionales recomiendan el movimiento activo y progresivo como primera línea de tratamiento para el dolor lumbar, cervical y articular no específico.</p>
         <span class="c-ref">WHO, 2023 · Lancet Low Back Pain Series</span>
       </div>
       <div class="ciencia-card">
         <div class="c-icon">📈</div>
-        <h4>Resultados en 4 semanas</h4>
-        <p>Los protocolos de 28 días con progresión estructurada muestran mejoras significativas en dolor, movilidad y calidad de vida en poblaciones sedentarias y con trabajo físico.</p>
+        <h4>Resultados en semanas, no meses</h4>
+        <p>Los protocolos con progresión estructurada muestran mejoras significativas en dolor, movilidad y calidad de vida en poblaciones sedentarias y con trabajo físico.</p>
         <span class="c-ref">Revista de Fisioterapia · Meta-análisis 2021</span>
       </div>
     </div>
@@ -1296,38 +657,59 @@
 
 
 <!-- ══════════════════════════════════
-     LA SOLUCIÓN
+     CÓMO ESTÁ ARMADO — 2 PROTOCOLOS
 ══════════════════════════════════ -->
 <section class="solucion">
   <div class="container">
     <span class="label">Cómo está armado</span>
-    <h2>28 días. 3 fases.<br>Un solo objetivo: que no vuelva.</h2>
-    <p class="lead">No es una lista de ejercicios armada al azar. Hay una razón para el orden, para la duración, para empezar como empezamos. La <strong>app</strong> te lleva de la mano cada día — con tu progreso, tus desafíos y tu racha. La <strong>guía PDF</strong> te queda de respaldo para repasar cualquier ejercicio, incluso sin internet.</p>
+    <h2>Dos protocolos.<br>Un solo objetivo: que no vuelva.</h2>
+    <p class="lead">No son listas de ejercicios armadas al azar. Hay una razón para el orden, para la duración, para empezar como empezamos. La <strong>app</strong> te lleva de la mano cada día. La <strong>guía PDF</strong> te queda de respaldo para repasar cualquier ejercicio, incluso sin internet.</p>
 
-    <div class="fases">
-      <div class="fase-card">
-        <div class="fase-num">Fase 1 · Días 1–10</div>
-        <h3>Soltar</h3>
-        <p>El sistema nervioso lleva semanas en modo alarma. Antes de fortalecer, el cuerpo necesita aprender a liberar. Respiración diafragmática, movilidad articular, activación parasimpática.</p>
+    <div class="protocolo-bloque">
+      <div class="protocolo-titulo">🦴 Espalda y Cuello — 28 días</div>
+      <div class="protocolo-sub">3 fases · para dolor lumbar, cervical, contracturas y hernias</div>
+      <div class="fases">
+        <div class="fase-card">
+          <div class="fase-num">Fase 1 · Días 1–10</div>
+          <h3>Soltar</h3>
+          <p>El sistema nervioso lleva semanas en modo alarma. Antes de fortalecer, el cuerpo necesita aprender a liberar. Respiración diafragmática, movilidad articular.</p>
+        </div>
+        <div class="fase-card">
+          <div class="fase-num">Fase 2 · Días 11–21</div>
+          <h3>Fortalecer</h3>
+          <p>Con la base lista, construimos la fuerza real que impide que el dolor vuelva. Core profundo, cadena posterior, control escapular.</p>
+        </div>
+        <div class="fase-card">
+          <div class="fase-num">Fase 3 · Días 22–28</div>
+          <h3>Integrar</h3>
+          <p>Los movimientos dejan de ser ejercicios y se vuelven tu nueva forma de moverte. Patrones que se sostienen de por vida.</p>
+        </div>
       </div>
-      <div class="fase-card">
-        <div class="fase-num">Fase 2 · Días 11–21</div>
-        <h3>Fortalecer</h3>
-        <p>Con la base lista, construimos la fuerza real que impide que el dolor vuelva. Core profundo (transverso, multífido), cadena posterior, control escapular.</p>
-      </div>
-      <div class="fase-card">
-        <div class="fase-num">Fase 3 · Días 22–28</div>
-        <h3>Integrar</h3>
-        <p>Los movimientos dejan de ser ejercicios y se vuelven tu nueva forma de moverte. Patrones funcionales que se sostienen de por vida.</p>
+    </div>
+
+    <div class="protocolo-bloque">
+      <div class="protocolo-titulo">🦵 Cadera y Rodilla — 14 días</div>
+      <div class="protocolo-sub">2 fases · para artrosis, sensibilización y miedo al movimiento</div>
+      <div class="fases">
+        <div class="fase-card">
+          <div class="fase-num">Fase 1 · Días 1–7</div>
+          <h3>Reducir la alarma</h3>
+          <p>Movilidad suave, sin forzar, para bajar la sensibilización y perder el miedo a moverte. El primer paso antes de cargar peso.</p>
+        </div>
+        <div class="fase-card">
+          <div class="fase-num">Fase 2 · Días 8–14</div>
+          <h3>Fuerza funcional</h3>
+          <p>Sentadillas, subir escaleras, levantarte de la silla, caminar sin miedo. Fuerza real para lo que hacés todos los días.</p>
+        </div>
       </div>
     </div>
 
     <div class="incluye-grid">
-      <div class="incluye-item"><div class="incluye-icon">📲</div> La app DolorConCiencia: tu programa de 28 días en el celular</div>
-      <div class="incluye-item"><div class="incluye-icon">📊</div> Perfil de dolor personalizado — se adapta a tu caso desde el día 1</div>
+      <div class="incluye-item"><div class="incluye-icon">📲</div> Tu app: perfil personalizado, ejercicios guiados y seguimiento diario</div>
+      <div class="incluye-item"><div class="incluye-icon">📊</div> Se adapta a tu caso desde el día 1 — no es un programa genérico</div>
       <div class="incluye-item"><div class="incluye-icon">🔥</div> Seguimiento de racha y progreso: ves cómo baja tu dolor semana a semana</div>
       <div class="incluye-item"><div class="incluye-icon">🎮</div> Trivias, desafíos y XP — sumar tus 15 minutos se siente como un juego</div>
-      <div class="incluye-item"><div class="incluye-icon">📋</div> Guía PDF de regalo — 59 páginas con 43 ilustraciones de cada ejercicio</div>
+      <div class="incluye-item"><div class="incluye-icon">📋</div> Guía PDF de regalo, con ilustraciones de cada ejercicio</div>
       <div class="incluye-item"><div class="incluye-icon">🧬</div> Neurociencia del dolor explicada en lenguaje simple, sin tecnicismos</div>
       <div class="incluye-item"><div class="incluye-icon">⏱</div> 15 minutos al día, desde tu casa — sin equipamiento</div>
       <div class="incluye-item"><div class="incluye-icon">🩺</div> Sección de contraindicaciones y modificaciones para cada nivel</div>
@@ -1337,26 +719,55 @@
 
 
 <!-- ══════════════════════════════════
-     TESTIMONIOS
+     UNA VUELTA POR ADENTRO (guías)
+══════════════════════════════════ -->
+<section class="preview-guia">
+  <div class="container">
+    <span class="label">Una vuelta por adentro</span>
+    <h2>Esto es lo que te encontrás<br>cuando empezás.</h2>
+    <p class="lead">La app pregunta dónde trabajás, cómo te movés y dónde te duele — y desde ahí arma tu perfil. La guía PDF que viene de regalo te queda como respaldo para repasar cualquier ejercicio, incluso sin señal.</p>
+
+    <div class="preview-scroll">
+      <div class="preview-page" onclick="openLightbox('guia_preview_p1.jpg')"><img src="guia_preview_p1.jpg" alt="Portada — Protocolo 28 Días Espalda y Cuello" loading="lazy"></div>
+      <div class="preview-page" onclick="openLightbox('guia_preview_p3.jpg')"><img src="guia_preview_p3.jpg" alt="Ejercicios ilustrados paso a paso, con modificación si hay dificultad" loading="lazy"></div>
+      <div class="preview-page" onclick="openLightbox('guia_preview_p5.jpg')"><img src="guia_preview_p5.jpg" alt="Checkpoint de progreso a la semana" loading="lazy"></div>
+      <div class="preview-page" onclick="openLightbox('guia rodilla-cadera.jpeg')"><img src="guia rodilla-cadera.jpeg" alt="Portada — Guía Rodilla y Cadera" loading="lazy"></div>
+      <div class="preview-page" onclick="openLightbox('Imagenes de la app/app_home_screen.jpg')"><img src="Imagenes de la app/app_home_screen.jpg" alt="App — Pantalla de inicio con racha y progreso diario" loading="lazy"></div>
+      <div class="preview-page" onclick="openLightbox('assets/ventas_rodilla/mock_trivia_v2.png')"><img src="assets/ventas_rodilla/mock_trivia_v2.png" alt="App — Trivia de neurociencia del dolor" loading="lazy"></div>
+    </div>
+    <p style="font-size:0.8rem; color:var(--texto-claro); margin-top:12px; text-align:center;">← Deslizá · Hacé clic para ampliar cualquier página</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     TESTIMONIOS — MEZCLADOS
 ══════════════════════════════════ -->
 <section class="testimonios">
   <div class="container">
     <span class="label">Lo que dijeron ellos</span>
-    <h2>10 personas. 10 trabajos distintos.<br>El mismo resultado.</h2>
-    <p class="lead">Antes de salir al público, 10 personas usaron el programa completo. Acá están sus palabras — sin editar, sin filtro.</p>
+    <h2>20+ personas. Dos protocolos.<br>El mismo resultado.</h2>
+    <p class="lead">Antes de salir al público, más de 20 personas probaron los programas completos — de espalda/cuello y de cadera/rodilla. Acá están sus palabras, sin editar, sin filtro.</p>
 
     <div class="testi-grid">
 
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Tengo hernias discales y jugué rugby muchos años. Había probado masajes, calmantes, de todo… pero volvía siempre. Con esta guía entendí algo clave: no era solo el dolor, era cómo me estaba moviendo todos los días. Hoy puedo cerrar el negocio sin esa sensación de que me tienen que despegar la espalda."</p>
+        <p class="testi-quote">"Tengo hernias discales y jugué rugby muchos años. Había probado masajes, calmantes, de todo… pero volvía siempre. Hoy puedo cerrar el negocio sin esa sensación de que me tienen que despegar la espalda."</p>
         <div class="testi-author">
           <div class="testi-avatar">D</div>
-          <div>
-            <div class="testi-name">Diego, 44 años</div>
-            <div class="testi-desc">Vendedor · hernias discales · ex rugby</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
+          <div><div class="testi-name">Diego, 44 años</div><div class="testi-desc">Vendedor · hernias discales</div></div>
+          <span class="testi-tag tag-espalda">Espalda</span>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Llevaba meses evitando salir a caminar por miedo a ese pinchazo en la cadera. Esta guía no solo me dio ejercicios, sino que me enseñó por qué me dolía. Ya estoy haciendo senderismo de nuevo sin miedo."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">J</div>
+          <div><div class="testi-name">Julián R., 48 años</div><div class="testi-desc">Dolor de cadera</div></div>
+          <span class="testi-tag tag-rodilla">Cadera/Rodilla</span>
         </div>
       </div>
 
@@ -1365,24 +776,18 @@
         <p class="testi-quote">"Aprendí a usar las piernas y los glúteos para absorber la carga en vez de romperme la espalda. El dolor disminuyó muchísimo y ahora lo aplico de manera automática en la obra."</p>
         <div class="testi-author">
           <div class="testi-avatar">E</div>
-          <div>
-            <div class="testi-name">Esteban</div>
-            <div class="testi-desc">Albañil</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
+          <div><div class="testi-name">Esteban</div><div class="testi-desc">Albañil</div></div>
+          <span class="testi-tag tag-espalda">Espalda</span>
         </div>
       </div>
 
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Siempre sentía que el dolor me bajaba hacia la pierna y me limitaba un montón. A partir de la tercera semana empezó a ceder de verdad. Hoy me muevo con mucha más confianza en el laburo."</p>
+        <p class="testi-quote">"Mis rodillas se sentían 'oxidadas' después de estar mucho tiempo sentada trabajando. El programa de 14 días fue el empujón que necesitaba para retomar hábitos saludables. Muy recomendable."</p>
         <div class="testi-author">
-          <div class="testi-avatar">M</div>
-          <div>
-            <div class="testi-name">Matías</div>
-            <div class="testi-desc">Mecánico</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
+          <div class="testi-avatar">S</div>
+          <div><div class="testi-name">Sofía T., 39 años</div><div class="testi-desc">Trabajo de oficina</div></div>
+          <span class="testi-tag tag-rodilla">Cadera/Rodilla</span>
         </div>
       </div>
 
@@ -1391,63 +796,8 @@
         <p class="testi-quote">"Por fin entendí por qué me dolía, y eso solo ya fue un cambio enorme. Ahora termino 9 horas frente al monitor sin ese nudo insoportable entre los omóplatos. Todavía no lo puedo creer."</p>
         <div class="testi-author">
           <div class="testi-avatar">C</div>
-          <div>
-            <div class="testi-name">Carlos</div>
-            <div class="testi-desc">Abogado</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Soy maestra y termino el día destruida de la espalda y el cuello. Ya en la segunda semana noté que me levantaba menos rígida. Lo hacía mientras mis hijos dormían y me cambió muchísimo el dolor cervical."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">Y</div>
-          <div>
-            <div class="testi-name">Yani</div>
-            <div class="testi-desc">Maestra de grado · mamá</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Lo que más me sorprendió fue la primera parte — antes de los ejercicios fuertes, aprendés a soltar de verdad. Eso fue lo que me cambió. Volví a jugar con los chicos en el suelo sin el miedo constante a quedarme dura."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">M</div>
-          <div>
-            <div class="testi-name">Mariana</div>
-            <div class="testi-desc">Docente de nivel inicial</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Pasé de un dolor insoportable a terminar la semana casi sin molestias. Solo 15 minutos en casa. Hay dos ejercicios específicos que me dieron una estabilidad que no sabía que me faltaba — no lo podía creer."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">P</div>
-          <div>
-            <div class="testi-name">Paola</div>
-            <div class="testi-desc">Administrativa</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Paso HORAS inclinada haciendo uñas y tratamientos faciales. Llegaba a casa con el trapecio duro como piedra y migrañas tremendas. Los ejercicios de respiración y hombros me salvaron. Menos tensión acumulada y más energía para trabajar."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">V</div>
-          <div>
-            <div class="testi-name">Viki</div>
-            <div class="testi-desc">Cosmiatra</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
+          <div><div class="testi-name">Carlos</div><div class="testi-desc">Abogado</div></div>
+          <span class="testi-tag tag-espalda">Espalda</span>
         </div>
       </div>
 
@@ -1456,24 +806,28 @@
         <p class="testi-quote">"Tengo 69 años y pensé que ya era tarde para mejorar mis dolores. Me daba miedo moverme. La guía me ayudó a perder ese miedo. Hoy camino más, duermo mejor y juego con mis nietos sin quedar dolorida al otro día."</p>
         <div class="testi-author">
           <div class="testi-avatar">S</div>
-          <div>
-            <div class="testi-name">Susana, 69 años</div>
-            <div class="testi-desc">Jubilada</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
+          <div><div class="testi-name">Susana, 69 años</div><div class="testi-desc">Jubilada</div></div>
+          <span class="testi-tag tag-espalda">Espalda</span>
         </div>
       </div>
 
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Entre la facu, la compu y el sobrepeso, mi espalda vivía contracturada. Me gustó que era progresiva y sin exigencias locas. Nunca me sentí juzgado. Después de los 28 días siento más estabilidad, menos dolor lumbar y ganas de moverme más."</p>
+        <p class="testi-quote">"Al principio pensaba que una app no podía reemplazar la atención personalizada, pero me sorprendió la claridad de los videos y el seguimiento diario. Es como tener a un profesional explicándote los ejercicios en casa."</p>
         <div class="testi-author">
-          <div class="testi-avatar">F</div>
-          <div>
-            <div class="testi-name">Felipe</div>
-            <div class="testi-desc">Estudiante universitario</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
+          <div class="testi-avatar">E</div>
+          <div><div class="testi-name">Elena M., 55 años</div><div class="testi-desc">Beta tester</div></div>
+          <span class="testi-tag tag-rodilla">Cadera/Rodilla</span>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Soy maestra y termino el día destruida de la espalda y el cuello. Ya en la segunda semana noté que me levantaba menos rígida. Lo hacía mientras mis hijos dormían y me cambió muchísimo el dolor cervical."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">Y</div>
+          <div><div class="testi-name">Yani</div><div class="testi-desc">Maestra de grado · mamá</div></div>
+          <span class="testi-tag tag-espalda">Espalda</span>
         </div>
       </div>
 
@@ -1496,12 +850,12 @@
       </div>
       <div class="mj-texto">
         <h3>María José</h3>
-        <div class="mj-credencial">Bióloga en formación avanzada · UNLpam · Universidad Nacional de La Pampa</div>
+        <div class="mj-credencial">Bióloga en formación avanzada · UNLPam · Universidad Nacional de La Pampa</div>
         <p>El dolor me agarró en dos momentos muy distintos: haciendo trabajo de campo y horas de laboratorio para mi carrera, y después cuando empecé a dedicarme al marketing y pasé — y sigo pasando — horas frente a la pantalla. En los dos casos, el cuerpo me pasó factura.</p>
         <p>Fui al gym. Consulté profesionales. Siempre me decían lo mismo — los mismos ejercicios genéricos, el mismo "fuerza de core", sin entender mi caso. El dolor volvía igual.</p>
-        <p>Decidí estudiarlo con la misma mentalidad con la que estudio biología: ir a la evidencia real. Lo que encontré fue diferente a todo lo que me habían dicho. Armé este protocolo, lo probé, funcionó. Hoy lo sigo aplicando en mi rutina diaria — y cambió mi calidad de vida. Después lo probaron 10 personas más.</p>
+        <p>Decidí estudiarlo con la misma mentalidad con la que estudio biología: ir a la evidencia real. Armé el protocolo de espalda y cuello, lo probé, funcionó. Después armé el de cadera y rodilla, pensando en quienes me escribían con ese dolor distinto. Hoy los sigo aplicando en mi rutina diaria — y cambiaron mi calidad de vida. Después los probaron más de 20 personas más.</p>
         <div class="mj-diferencia">
-          🧬 Bióloga en formación, no coach. La diferencia es que acá la evidencia científica no es un adorno — es la base de cada decisión del protocolo.
+          🧬 Bióloga en formación, no coach. La diferencia es que acá la evidencia científica no es un adorno — es la base de cada decisión de los dos protocolos.
         </div>
       </div>
     </div>
@@ -1510,283 +864,78 @@
 
 
 <!-- ══════════════════════════════════
-     PRECIO + CTA
+     ELEGÍ TU PROTOCOLO
 ══════════════════════════════════ -->
-<section class="precio-cta">
+<section class="precio-cta" id="elegi-tu-protocolo">
   <div class="container">
     <span class="label" style="color:var(--verde-acento);">Precio de lanzamiento</span>
-    <h2>28 días de acompañamiento real.<br>A precio de lanzamiento.</h2>
-    <p class="lead"><strong>App DolorConCiencia + Guía PDF — Programa Espalda y Cuello</strong><br>15 minutos al día, en tu casa, con algo que sabe dónde estás y adónde vas. Pago único, sin suscripción, acceso inmediato.</p>
+    <h2>Elegí tu protocolo.<br>Acompañamiento real, a precio de lanzamiento.</h2>
+    <p class="lead">Pago único, sin suscripción, acceso inmediato. Si tenés las dos zonas afectadas, el Pack Completo te conviene más.</p>
 
-    <div class="precio-box">
-      <div class="precio-actual">$21.99 <span style="font-size:1.4rem;font-weight:400;">USD</span></div>
-      <div class="precio-desc">App DolorConCiencia + Guía PDF de regalo · Pago único · Sin suscripción · Acceso inmediato</div>
+    <div class="precios-grid">
 
-      <a class="btn-wa" href="https://wa.me/542494205535?text=Hola!%20Vi%20la%20página%20y%20quiero%20la%20app%20%2B%20guía%20de%2028%20días%20🌿" target="_blank" style="width:100%; justify-content:center;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Quiero la app + guía — escribime por WhatsApp
-      </a>
-
-      <p style="margin-top:16px; font-size:0.92rem; color:#4caf7d; font-weight:700; letter-spacing:0.01em;">🎁 Te regalo el Mapa de Dolor gratis cuando me escribís por WhatsApp</p>
-
-      <div class="garantia-pill">
-        <div class="g-icon">🛡️</div>
-        <div>
-          <strong>Garantía de 7 días sin preguntas</strong>
-          <span>Si en 7 días de uso honesto no notás ninguna diferencia, te devolvemos el dinero. Sin vueltas.</span>
-        </div>
+      <div class="precio-card">
+        <div class="precio-card-nombre">🦴 Espalda y Cuello</div>
+        <div class="precio-card-monto">$21.99 <span>USD</span></div>
+        <div class="precio-card-desc">Programa de 28 días · app + guía PDF de regalo</div>
+        <ul class="precio-card-incluye">
+          <li>App con perfil personalizado</li>
+          <li>Guía PDF de regalo incluida</li>
+          <li>28 días · 3 fases</li>
+          <li>Garantía de 7 días</li>
+        </ul>
+        <a class="btn-wa" href="https://wa.me/542494205535?text=Hola!%20Vi%20la%20página%20y%20quiero%20la%20app%20%2B%20guía%20de%2028%20días%20de%20espalda%20y%20cuello%20🌿" target="_blank">Quiero este →</a>
       </div>
 
-      <p style="margin-top:24px; font-size:0.82rem; color:rgba(255,255,255,0.45); line-height:1.7;">
-        ¿Preferís empezar más simple? También está disponible <strong style="color:rgba(255,255,255,0.7);">solo la guía PDF por $9.99 USD</strong> — escribinos y te contamos cuál te conviene según tu caso.
-      </p>
+      <div class="precio-card destacada">
+        <div class="precio-ribbon">Más elegido</div>
+        <div class="precio-card-nombre">🌿 Pack Completo</div>
+        <div class="precio-tachado">$39.98</div>
+        <div class="precio-card-monto">$29.99 <span>USD</span></div>
+        <div class="precio-card-desc">Las 2 apps + las 2 guías PDF de regalo</div>
+        <ul class="precio-card-incluye">
+          <li>App Espalda y Cuello (28 días)</li>
+          <li>App Cadera y Rodilla (14 días)</li>
+          <li>Las 2 guías PDF de regalo</li>
+          <li>Garantía de 7 días</li>
+        </ul>
+        <a class="btn-wa" href="https://wa.me/542494205535?text=Hola!%20Vi%20la%20página%20y%20quiero%20el%20Pack%20Completo%20(las%202%20apps)%20🌿" target="_blank">Quiero el Pack Completo →</a>
+      </div>
+
+      <div class="precio-card">
+        <div class="precio-card-nombre">🦵 Cadera y Rodilla</div>
+        <div class="precio-card-monto">$17.99 <span>USD</span></div>
+        <div class="precio-card-desc">Programa de 14 días · app + guía PDF de regalo</div>
+        <ul class="precio-card-incluye">
+          <li>App con perfil personalizado</li>
+          <li>Guía PDF de regalo incluida</li>
+          <li>14 días · 2 fases</li>
+          <li>Garantía de 7 días</li>
+        </ul>
+        <a class="btn-wa" href="https://wa.me/542494205535?text=Hola!%20Vi%20la%20página%20y%20quiero%20la%20app%20%2B%20guía%20de%2014%20días%20de%20cadera%20y%20rodilla%20🌿" target="_blank">Quiero este →</a>
+      </div>
+
     </div>
+
+    <p style="margin-top:24px; font-size:0.92rem; color:#4caf7d; font-weight:700;">🎁 Te regalo el Mapa de Dolor gratis cuando me escribís por WhatsApp</p>
+
+    <div class="garantia-pill">
+      <div class="g-icon">🛡️</div>
+      <div>
+        <strong>Garantía de 7 días sin preguntas</strong>
+        <span>Si en 7 días de uso honesto no notás ninguna diferencia, te devolvemos el dinero. Sin vueltas.</span>
+      </div>
+    </div>
+
+    <p style="margin-top:20px; font-size:0.82rem; color:rgba(255,255,255,0.45); line-height:1.7;">
+      ¿Preferís empezar más simple? También está disponible <strong style="color:rgba(255,255,255,0.7);">solo la guía PDF, por $9.99 USD cada una</strong> — escribinos y te contamos cuál te conviene según tu caso.
+    </p>
   </div>
 </section>
 
 
 <!-- ══════════════════════════════════
-     RODILLA Y CADERA — INTRO + VIDEOS
-══════════════════════════════════ -->
-<section class="videos-section" id="rodilla-cadera">
-  <div class="container">
-    <span class="label">Protocolo de 14 días · Rodilla y Cadera</span>
-    <h2>¿Tu dolor no es de espalda,<br>sino de rodilla o cadera?</h2>
-    <p class="lead">Tenemos un programa hermano, pensado específicamente para rodilla y cadera: mismo enfoque científico, mismo formato app + guía, pero adaptado a sentadillas, escaleras, levantarse de la silla y caminar sin miedo. Mirá cómo se usa en la vida real.</p>
-
-    <div class="videos-grid">
-      <div class="video-card">
-        <div class="video-wrap">
-          <video controls muted loop playsinline>
-            <source src="Contenido rodilla y cadera/estiramiento con la app en el piso.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-caption">
-          <strong>Estiramiento guiado</strong>
-          La app al lado, en el piso, siguiendo el video del ejercicio paso a paso.
-        </div>
-      </div>
-      <div class="video-card">
-        <div class="video-wrap">
-          <video controls muted loop playsinline>
-            <source src="Contenido rodilla y cadera/WhatsApp Video 2026-06-25 at 5.14.49 PM.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-caption">
-          <strong>La app en uso real</strong>
-          Así se ve el protocolo de 14 días funcionando en el celular, día a día.
-        </div>
-      </div>
-    </div>
-
-    <div class="real-grid" style="grid-template-columns:repeat(3,1fr); max-width:860px; margin:32px auto 0;">
-      <div class="real-card">
-        <img src="Contenido rodilla y cadera/Carlos, haciendo sentadilla.png" alt="Carlos haciendo sentadilla en casa siguiendo la app">
-        <div class="real-card-caption">
-          <strong>Carlos</strong>
-          <span>Sentadilla guiada, en su casa, con la app al lado</span>
-        </div>
-      </div>
-      <div class="real-card">
-        <img src="Contenido rodilla y cadera/matrimonio estirando con la app.png" alt="Matrimonio estirando juntos en el parque siguiendo el protocolo">
-        <div class="real-card-caption">
-          <strong>Matrimonio, beta testers</strong>
-          <span>Estirando juntos al aire libre, siguiendo el protocolo de 14 días</span>
-        </div>
-      </div>
-      <div class="real-card">
-        <img src="Contenido rodilla y cadera/WhatsApp Image 2026-06-26 at 10.01.54 AM.jpeg" alt="Estiramiento de cadera en lunge, guiado paso a paso">
-        <div class="real-card-caption">
-          <strong>Estiramiento de cadera</strong>
-          <span>El mismo estiramiento que vas a encontrar en tu programa de 14 días</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════
-     RODILLA Y CADERA — APP SCREENS
-══════════════════════════════════ -->
-<section class="app-screens">
-  <div class="container">
-    <span class="label">Mirá adentro — Rodilla y Cadera</span>
-    <h2>El mismo sistema que la app de espalda.<br>Adaptado a rodilla y cadera.</h2>
-    <p class="lead">Perfil personalizado, ejercicios con video, tip científico y temporizador, trivias y programa de 14 días con seguimiento día a día.</p>
-
-    <div class="screens-scroll">
-      <div class="screen-card">
-        <img src="assets/ventas_rodilla/mock_home_dashboard.png" alt="Pantalla de inicio — Buen día, Majo. Perfil B Artrosis con sensibilización. Día 4 de 14, 21% de progreso" onclick="openLightbox('assets/ventas_rodilla/mock_home_dashboard.png')" style="cursor:pointer;">
-        <div class="screen-label">
-          <strong>Pantalla de inicio</strong>
-          Tu perfil, tu racha y tu progreso del programa de 14 días
-        </div>
-      </div>
-      <div class="screen-card">
-        <img src="assets/ventas_rodilla/mock_dia_completado.png" alt="Desactivar la alarma de la cadera — con la sección La ciencia detrás y ejercicios del día" onclick="openLightbox('assets/ventas_rodilla/mock_dia_completado.png')" style="cursor:pointer;">
-        <div class="screen-label">
-          <strong>Cada día, con su porqué</strong>
-          La ciencia detrás de cada ejercicio, explicada simple
-        </div>
-      </div>
-      <div class="screen-card">
-        <img src="assets/ventas_rodilla/mock_ejercicio_sentadilla.png" alt="Sentadilla parcial apoyada — ejercicio con video demostrativo, instrucciones, tip científico y temporizador" onclick="openLightbox('assets/ventas_rodilla/mock_ejercicio_sentadilla.png')" style="cursor:pointer;">
-        <div class="screen-label">
-          <strong>Cada ejercicio, con video</strong>
-          Demostración, instrucciones y temporizador al lado tuyo
-        </div>
-      </div>
-      <div class="screen-card">
-        <img src="assets/ventas_rodilla/mock_programa.png" alt="Tu programa — vista de los 14 días, Fase 1 y Fase 2" onclick="openLightbox('assets/ventas_rodilla/mock_programa.png')" style="cursor:pointer;">
-        <div class="screen-label">
-          <strong>Tu programa completo</strong>
-          Los 14 días organizados en 2 fases, con tu avance marcado
-        </div>
-      </div>
-    </div>
-    <p style="font-size:0.78rem; color:rgba(255,255,255,0.3); margin-top:8px; text-align:center;">← Deslizá · Hacé clic para ampliar</p>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════
-     RODILLA Y CADERA — PREVIEW DE LA GUÍA
-══════════════════════════════════ -->
-<section class="preview-guia">
-  <div class="container">
-    <span class="label">Una vuelta por adentro</span>
-    <h2>Así es la guía,<br>por dentro.</h2>
-    <p class="lead">La anatomía explicada en simple, los ejercicios con video y tip científico, y el porqué detrás de cada día. La guía PDF te queda de respaldo para repasar cualquier ejercicio, incluso sin señal.</p>
-
-    <div class="preview-scroll">
-      <div class="preview-page" onclick="openLightbox('guia rodilla-cadera.jpeg')">
-        <img src="guia rodilla-cadera.jpeg" alt="Portada — Guía Rodilla y Cadera" loading="lazy">
-      </div>
-      <div class="preview-page" onclick="openLightbox('Contenido rodilla y cadera/WhatsApp Image 2026-06-26 at 10.02.35 AM.jpeg')">
-        <img src="Contenido rodilla y cadera/WhatsApp Image 2026-06-26 at 10.02.35 AM.jpeg" alt="Lámina educativa — Rodilla y Cadera, complejo de movilidad, anatomía explicada" loading="lazy">
-      </div>
-      <div class="preview-page" onclick="openLightbox('assets/ventas_rodilla/mock_trivia.png')">
-        <img src="assets/ventas_rodilla/mock_trivia.png" alt="Trivia interactiva sobre rodilla y cadera dentro de la app" loading="lazy">
-      </div>
-      <div class="preview-page" onclick="openLightbox('assets/ventas_rodilla/mock_ejercicio_movilidad.png')">
-        <img src="assets/ventas_rodilla/mock_ejercicio_movilidad.png" alt="Movilidad de cadera sentada — ejercicio con video y tip científico" loading="lazy">
-      </div>
-      <div class="preview-page" onclick="openLightbox('assets/ventas_rodilla/mock_dia_completado.png')">
-        <img src="assets/ventas_rodilla/mock_dia_completado.png" alt="Día completado — la ciencia detrás del ejercicio, explicada simple" loading="lazy">
-      </div>
-    </div>
-    <p style="font-size:0.8rem; color:var(--texto-claro); margin-top:12px; text-align:center;">← Deslizá · Hacé clic para ampliar cualquier página</p>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════
-     RODILLA Y CADERA — TESTIMONIOS
-══════════════════════════════════ -->
-<section class="testimonios">
-  <div class="container">
-    <span class="label">Lo que dijeron ellos</span>
-    <h2>Más de 10 personas lo probaron<br>antes del lanzamiento.</h2>
-    <p class="lead">Beta testers reales del protocolo de Rodilla y Cadera — sin editar, sin filtro.</p>
-
-    <div class="testi-grid">
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Llevaba meses evitando salir a caminar por miedo a ese pinchazo en la cadera. Esta guía no solo me dio ejercicios, sino que me enseñó por qué me dolía. Entender la neurociencia detrás del dolor cambió mi forma de moverme. ¡Ya estoy haciendo senderismo de nuevo sin miedo!"</p>
-        <div class="testi-author">
-          <div class="testi-avatar">J</div>
-          <div>
-            <div class="testi-name">Julián R., 48 años</div>
-            <div class="testi-desc">Dolor de cadera</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Al principio pensaba que una app no podía reemplazar la atención personalizada, pero me sorprendió la claridad de los videos y el seguimiento diario. Es como tener a un profesional explicándote los ejercicios en casa, paso a paso y sin complicaciones."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">E</div>
-          <div>
-            <div class="testi-name">Elena M., 55 años</div>
-            <div class="testi-desc">Beta tester</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Mis rodillas se sentían 'oxidadas' después de estar mucho tiempo sentada trabajando. El programa de 14 días fue el empujón que necesitaba para retomar hábitos saludables. ¡Muy recomendable!"</p>
-        <div class="testi-author">
-          <div class="testi-avatar">S</div>
-          <div>
-            <div class="testi-name">Sofía T., 39 años</div>
-            <div class="testi-desc">Trabajo de oficina</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Después de probar mil cosas, lo que más valoro de esta propuesta es el enfoque basado en evidencia. No es un recetario mágico; es una herramienta seria para entender cómo gestionar el dolor de cadera."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">M</div>
-          <div>
-            <div class="testi-name">Matías G., 42 años</div>
-            <div class="testi-desc">Beta tester</div>
-          </div>
-          <span class="testi-tag">✓ Beta tester</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════
-     RODILLA Y CADERA — PRECIO + CTA
-══════════════════════════════════ -->
-<section class="precio-cta">
-  <div class="container">
-    <span class="label" style="color:var(--verde-acento);">Protocolo Rodilla y Cadera</span>
-    <h2>14 días de acompañamiento real<br>para rodilla y cadera.</h2>
-    <p class="lead"><strong>App DolorConCiencia + Guía PDF — Programa Rodilla y Cadera</strong><br>El mismo enfoque científico, adaptado a sentadillas, escaleras y caminar sin miedo. Pago único, sin suscripción, acceso inmediato.</p>
-
-    <div class="precio-box">
-      <div class="precio-actual">$17.99 <span style="font-size:1.4rem;font-weight:400;">USD</span></div>
-      <div class="precio-desc">App DolorConCiencia (Rodilla y Cadera) + Guía PDF de regalo · Pago único · Sin suscripción · Acceso inmediato</div>
-
-      <a class="btn-wa" href="https://wa.me/542494205535?text=Hola!%20Vi%20la%20página%20y%20quiero%20la%20app%20%2B%20guía%20de%2014%20días%20de%20rodilla%20y%20cadera%20🌿" target="_blank" style="width:100%; justify-content:center;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Quiero la app + guía — escribime por WhatsApp
-      </a>
-
-      <p style="margin-top:16px; font-size:0.92rem; color:#4caf7d; font-weight:700; letter-spacing:0.01em;">🎁 Te regalo el Mapa de Dolor gratis cuando me escribís por WhatsApp</p>
-
-      <div class="garantia-pill">
-        <div class="g-icon">🛡️</div>
-        <div>
-          <strong>Garantía de 7 días sin preguntas</strong>
-          <span>Si en 7 días de uso honesto no notás ninguna diferencia, te devolvemos el dinero. Sin vueltas.</span>
-        </div>
-      </div>
-
-      <p style="margin-top:24px; font-size:0.82rem; color:rgba(255,255,255,0.45); line-height:1.7;">
-        ¿Preferís empezar más simple? También está disponible <strong style="color:rgba(255,255,255,0.7);">solo la guía PDF por $9.99 USD</strong> — escribinos y te contamos cuál te conviene según tu caso.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════
-     FAQ
+     FAQ AMPLIADA
 ══════════════════════════════════ -->
 <section class="faq">
   <div class="container">
@@ -1796,66 +945,47 @@
     <div class="faq-list">
 
       <div class="faq-item">
-        <button class="faq-pregunta" onclick="toggleFaq(this)">
-          ¿Necesito equipamiento o ir al gimnasio?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-respuesta">Nada. Esteban, albañil, lo hacía en el piso cuando llegaba de la obra. Yani lo hacía en el living mientras sus hijos dormían. Solo necesitás el celular y un espacio donde acostarte o sentarte.</div>
+        <button class="faq-pregunta" onclick="toggleFaq(this)">¿Cuál protocolo me conviene, o puedo comprar los dos?<span class="faq-icon">+</span></button>
+        <div class="faq-respuesta">Si tu dolor es de espalda o cuello, empezá por ese. Si es de cadera o rodilla, por el otro. Si tenés las dos cosas — es más común de lo que pensás, porque una compensación termina afectando la otra zona — el Pack Completo te conviene: las 2 apps + las 2 guías por $29.99, en vez de comprarlas separadas.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-pregunta" onclick="toggleFaq(this)">
-          ¿Cuánto tiempo lleva por día?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-respuesta">15 minutos en los días normales. Matías, mecánico, tiene días muy largos y hace la versión corta: 4 minutos. El programa está pensado para que lo puedas sostener con tu vida real, no con la vida ideal que no existe.</div>
+        <button class="faq-pregunta" onclick="toggleFaq(this)">¿Necesito equipamiento o ir al gimnasio?<span class="faq-icon">+</span></button>
+        <div class="faq-respuesta">Nada. Esteban, albañil, lo hacía en el piso cuando llegaba de la obra. Carlos hace sus sentadillas en el living. Solo necesitás el celular y un espacio donde acostarte, sentarte o pararte.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-pregunta" onclick="toggleFaq(this)">
-          ¿Funciona si tengo hernias o diagnóstico clínico?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-respuesta">Diego tiene hernias discales confirmadas y completó los 28 días sin problemas — con muy buenos resultados. Igual, el programa tiene una sección de contraindicaciones que te pido que leas. Si tenés dolor agudo de menos de 3 semanas, operación reciente de columna o una condición severa diagnosticada, primero hablá con tu médico.</div>
+        <button class="faq-pregunta" onclick="toggleFaq(this)">¿Cuánto tiempo lleva por día?<span class="faq-icon">+</span></button>
+        <div class="faq-respuesta">15 minutos en los días normales. Los dos programas están pensados para que los puedas sostener con tu vida real, no con la vida ideal que no existe.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-pregunta" onclick="toggleFaq(this)">
-          ¿Cómo accedo a la app después de pagar?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-respuesta">Confirmás el pago en Hotmart y en minutos te llega el acceso por email. Abrís el link, respondés 8 preguntas de perfil y arrancás el Día 1. Sin descargas.</div>
+        <button class="faq-pregunta" onclick="toggleFaq(this)">¿Funciona si tengo hernias, artrosis o diagnóstico clínico?<span class="faq-icon">+</span></button>
+        <div class="faq-respuesta">Diego tiene hernias discales confirmadas y completó los 28 días sin problemas — con muy buenos resultados. El protocolo de cadera y rodilla está pensado también para casos de artrosis con sensibilización. Igual, cada programa tiene una sección de contraindicaciones que te pido que leas. Si tenés dolor agudo de menos de 3 semanas, cirugía reciente o una condición severa diagnosticada, primero hablá con tu médico.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-pregunta" onclick="toggleFaq(this)">
-          ¿Para qué edad sirve?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-respuesta">Tenemos resultados de 20 a 69 años. Susana, la beta tester de 69 años, arrancó con las versiones más suaves y fue progresando a su ritmo. Cada ejercicio tiene una modificación para quien necesita empezar más despacio.</div>
+        <button class="faq-pregunta" onclick="toggleFaq(this)">¿Cómo accedo a la app después de pagar?<span class="faq-icon">+</span></button>
+        <div class="faq-respuesta">Confirmás el pago en Hotmart y en minutos te llega el acceso por email. Abrís el link, respondés unas preguntas de perfil y arrancás el Día 1. Sin descargas de tiendas de aplicaciones.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-pregunta" onclick="toggleFaq(this)">
-          Ya hice fisioterapia y el dolor volvió. ¿Esto es diferente?
-          <span class="faq-icon">+</span>
-        </button>
+        <button class="faq-pregunta" onclick="toggleFaq(this)">¿Para qué edad sirve?<span class="faq-icon">+</span></button>
+        <div class="faq-respuesta">Tenemos resultados de 20 a 69 años. Susana, beta tester de 69 años, arrancó con las versiones más suaves y fue progresando a su ritmo. Cada ejercicio tiene una modificación para quien necesita empezar más despacio.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">Ya hice fisioterapia y el dolor volvió. ¿Esto es diferente?<span class="faq-icon">+</span></button>
         <div class="faq-respuesta">La fisioterapia trabaja mientras estás en el consultorio. Esto trabaja la causa de fondo: la musculatura que no te sostiene, los patrones que repite tu cuerpo sin que te des cuenta, el sistema nervioso que quedó en modo alarma. No es "mejor que la fisio" — es diferente. Se pueden complementar perfectamente.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-pregunta" onclick="toggleFaq(this)">
-          ¿Qué pasa si me salto un día?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-respuesta">Nada grave, en serio. El programa está pensado para gente con vida real — no para personas con agenda perfecta. Retomás desde donde quedaste. Lo que importa es la dirección, no la perfección.</div>
+        <button class="faq-pregunta" onclick="toggleFaq(this)">¿Qué pasa si me salto un día?<span class="faq-icon">+</span></button>
+        <div class="faq-respuesta">Nada grave, en serio. Los programas están pensados para gente con vida real — no para personas con agenda perfecta. Retomás desde donde quedaste. Lo que importa es la dirección, no la perfección.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-pregunta" onclick="toggleFaq(this)">
-          ¿La app funciona en Android y en iPhone?
-          <span class="faq-icon">+</span>
-        </button>
+        <button class="faq-pregunta" onclick="toggleFaq(this)">¿La app funciona en Android y en iPhone?<span class="faq-icon">+</span></button>
         <div class="faq-respuesta">Sí, en los dos. Es una app web — no necesitás bajarla del Play Store ni del App Store. Abrís el link en el navegador de tu celular, creás tu cuenta y listo. Podés guardarla en la pantalla de inicio para tenerla como si fuera una app normal.</div>
       </div>
 
@@ -1876,7 +1006,7 @@
 
 <!-- Mobile float -->
 <div class="cta-float">
-  <a href="https://wa.me/542494205535?text=Hola!%20Vi%20la%20página%20de%20la%20app%20DolorConCiencia%20y%20quiero%20más%20información%20🌿" target="_blank">
+  <a href="https://wa.me/542494205535?text=Hola!%20Vi%20la%20página%20de%20DolorConCiencia%20y%20quiero%20más%20información%20🌿" target="_blank">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     Consultame
   </a>
@@ -1901,17 +1031,14 @@
   function toggleFaq(btn) {
     const respuesta = btn.nextElementSibling;
     const isOpen = btn.classList.contains('open');
-    // Close all open items first
     document.querySelectorAll('.faq-pregunta.open').forEach(function(b) {
       b.classList.remove('open');
       b.nextElementSibling.classList.remove('open');
     });
-    // Open clicked item unless it was already open
     if (!isOpen) {
       btn.classList.add('open');
       respuesta.classList.add('open');
     }
   }
 </script>
-</body>
-</html>
+</bo
